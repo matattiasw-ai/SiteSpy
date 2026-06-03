@@ -1,0 +1,22 @@
+<svg width="1800" height="560" viewBox="0 0 1800 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1800" height="560" rx="90" fill="#030712"/>
+<rect x="48" y="48" width="1704" height="464" rx="64" fill="#0F172A" stroke="#06B6D4" stroke-opacity=".55" stroke-width="3"/>
+<g transform="translate(130 115) scale(.32)">
+
+<linearGradient id="bg" x1="0" y1="0" x2="1024" y2="1024"><stop stop-color="#030712"/><stop offset="1" stop-color="#0F172A"/></linearGradient>
+<linearGradient id="aqua" x1="210" y1="130" x2="810" y2="890"><stop stop-color="#67E8F9"/><stop offset="1" stop-color="#2563EB"/></linearGradient>
+<filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="24" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1024" height="1024" rx="220" fill="url(#bg)"/>
+<path d="M512 132L796 252L746 666L512 900L278 666L228 252L512 132Z" fill="#0F172A" stroke="url(#aqua)" stroke-width="28" filter="url(#glow)"/>
+<path d="M674 304C597 276 494 286 410 356C348 408 350 488 426 526C494 560 621 557 661 623C689 668 638 726 551 744C485 758 409 740 350 704" stroke="white" stroke-width="54" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M674 304C597 276 494 286 410 356C348 408 350 488 426 526C494 560 621 557 661 623C689 668 638 726 551 744C485 758 409 740 350 704" stroke="#67E8F9" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="512" cy="456" r="78" fill="#2563EB" stroke="white" stroke-width="16"/>
+<circle cx="512" cy="456" r="25" fill="#030712"/>
+<path d="M316 322V258H380M708 258H772V322M316 702V766H380M708 766H772V702" stroke="#F59E0B" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+
+</g>
+<text x="515" y="250" font-family="Inter, Arial, sans-serif" font-size="126" font-weight="850" fill="white">SiteSpy</text>
+<text x="522" y="337" font-family="Inter, Arial, sans-serif" font-size="43" font-weight="500" fill="#67E8F9">Mobile masonry estimation for smarter site work</text>
+<text x="522" y="400" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500" fill="#94A3B8">Expo • React Native • Firebase • Android APK</text>
+</svg>

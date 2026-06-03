@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NAMBULI, NN SiteSpy Portfolio</title>
+    <meta name="description" content="SiteSpy portfolio page for NAMBULI, NN SiteSpy Portfolio" />
+    <style>
+      :root { color-scheme: dark; --bg:#07101e; --surface:#101b2d; --line:#273a5d; --text:#f8fbff; --muted:#a8b6cc; --cyan:#25c7f7; --gold:#d8a73e; --green:#49d28f; }
+      * { box-sizing: border-box; }
+      body { margin:0; font-family: Arial, Helvetica, sans-serif; background:var(--bg); color:var(--text); }
+      main { max-width: 1080px; margin: 0 auto; padding: 28px 18px 44px; }
+      header { display:grid; gap:14px; padding: 26px 0; }
+      .wordmark { width: 190px; max-width: 70vw; }
+      .chips { display:flex; gap:10px; flex-wrap:wrap; }
+      .chip { display:inline-flex; width:max-content; padding:8px 11px; border-radius:8px; background:#123a4a; color:var(--cyan); font-weight:800; font-size:13px; }
+      h1 { margin:0; font-size: clamp(30px, 8vw, 48px); line-height:1.02; }
+      h2 { margin:0 0 10px; font-size:20px; }
+      p { color:var(--muted); line-height:1.55; margin:0 0 12px; }
+      a { color:var(--cyan); }
+      .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:14px; }
+      .card { border:1px solid var(--line); background:var(--surface); border-radius:8px; padding:18px; min-height:150px; }
+      .hero { border-color:#108db8; background:#0b1d2d; }
+      .placeholder { min-height:180px; display:grid; place-items:center; text-align:center; border:1px dashed var(--line); border-radius:8px; background:#0b1528; color:var(--muted); padding:16px; }
+      ul { margin:0; padding-left:18px; color:var(--muted); line-height:1.6; }
+      .status { color:var(--green); font-weight:800; }
+      footer { margin-top:18px; color:var(--muted); font-size:13px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img class="wordmark" src="assets/sitespy-wordmark.svg" alt="SiteSpy" />
+        <div class="chips"><span class="chip">frontend</span><span class="chip">Portfolio evidence page</span></div>
+        <h1>NAMBULI, NN SiteSpy Portfolio</h1>
+        <p>Student number: 224078798</p>
+        <p>Dashboard UI cards, sections, and theme consistency.</p>
+        <p><a href="https://github.com/matattiasw-ai/SiteSpy">SiteSpy source repository</a></p>
+      </header>
+      <section class="grid">
+        <article class="card hero"><h2>Contribution</h2><p>Dashboard UI cards, sections, and theme consistency.</p><p>Assigned branch: <strong>`frontend/nambuli-nn-dashboard-ui`</strong></p><p class="status">Status: evidence shell ready for final student screenshots and video link.</p></article>
+        <article class="card"><h2>Stack / Tools</h2><ul><li>Expo React Native Android</li><li>Firebase Auth, Firestore, and Storage</li><li>Flet portfolio scaffold</li><li>GitHub Pages static export</li></ul></article>
+        <article class="card"><h2>Files / Validation Area</h2><ul><li>`src/screens/DashboardScreen.js`</li>
+<li>`src/components/AppCard.js`</li>
+<li>`src/components/SectionHeader.js`</li>
+<li>`src/theme/`</li></ul></article>
+        <article class="card"><h2>Evidence Placeholder</h2><div class="placeholder">Manual screenshot required: final app screen, terminal check, or assigned contribution evidence.</div></article>
+        <article class="card"><h2>Role / Contribution Notes</h2><p>Describe the exact work personally verified by the student, including tests, screenshots, and review notes. Do not claim commits or authorship that are not personally owned.</p></article>
+        <article class="card"><h2>Individual Video</h2><p>Manual link required. Maximum duration: 1 minute 30 seconds.</p></article>
+        <article class="card"><h2>Challenges</h2><p>Document debugging, mobile UI decisions, data security, testing, or GitHub workflow lessons from this assigned area.</p></article>
+        <article class="card"><h2>Launch / Demo</h2><p>This page is static and GitHub Pages-ready. App APK remains the primary mobile deliverable.</p></article>
+      </section>
+      <footer>Generated as a launchable portfolio shell. Student must verify, personalize, and publish from their own repository/account.</footer>
+    </main>
+  </body>
+</html>
