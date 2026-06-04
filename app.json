@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "SiteSpy",
+    "owner": "matattiasw",
+    "slug": "sitespy",
+    "version": "0.7.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "jsEngine": "hermes",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#08111F"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {
+      "package": "com.unam.sitespy",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#08111F"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-image-picker",
+      "expo-font",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 29
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    }
+  }
+}
