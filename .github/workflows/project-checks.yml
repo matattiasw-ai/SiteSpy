@@ -1,0 +1,73 @@
+name: Project Checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate-expo-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run lint if available
+        shell: bash
+        run: |
+          if npm run | grep -q " lint"; then
+            npm run lint
+          else
+            echo "No lint script configured."
+          fi
+
+      - name: Run project check
+        run: npm run check
+
+      - name: Verify required Expo structure
+        shell: bash
+        run: |
+          test -f package.json
+          test -f app.json
+          test -f app.config.js
+          test -f eas.json
+          test -f firebase.json
+          test -f firestore.rules
+          test -f storage.rules
+          test -f firestore.indexes.json
+          test -d src/navigation
+          test -d src/screens
+          test -d src/services
+          test -d src/utils
+          test -f README.md
+
+      - name: Block raw collaborator and secret files
+        shell: bash
+        run: |
+          set -euo pipefail
+          blocked=0
+          while IFS= read -r file; do
+            lower="$(printf '%s' "$file" | tr '[:upper:]' '[:lower:]')"
+            if [ "$lower" = ".env.example" ]; then
+              continue
+            fi
+            case "$lower" in
+              *.env|*.env.*|*credentials*.json|*credentials*.txt|*secret*.json|*secret*.txt|*token*.json|*token*.txt|*pat*.json|*pat*.txt|docs/collaborators.txt|docs/thatfile.txt|docs/collaborators.json)
+                echo "Blocked private file: $file"
+                blocked=1
+                ;;
+            esac
+          done < <(git ls-files)
+
+          if [ "$blocked" -ne 0 ]; then
+            exit 1
+          fi
