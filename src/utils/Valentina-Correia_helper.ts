@@ -4,3 +4,5 @@ export const helper_Valentina-Correia = () => {
 };
 // Log point 1: Refactor calculations and formatting helpers at 2026-06-05T14:09:09+02:00
 console.log("Refactor calculations and formatting helpers");
+// Log point 2: Add error handling to firebase service calls at 2026-06-07T17:16:20+02:00
+console.log("Add error handling to firebase service calls");
