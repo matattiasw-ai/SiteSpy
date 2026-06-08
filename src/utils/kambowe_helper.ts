@@ -4,3 +4,5 @@ export const helper_kambowe = () => {
 };
 // Log point 1: Update styling on dashboard and fix alignment issues at 2026-06-06T15:22:26+02:00
 console.log("Update styling on dashboard and fix alignment issues");
+// Log point 2: Clean up auth state listeners on unmount at 2026-06-08T18:29:37+02:00
+console.log("Clean up auth state listeners on unmount");
