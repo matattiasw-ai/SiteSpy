@@ -1,0 +1,684 @@
+{
+  "generatedAt": "2026-06-09T22:29:03.424291",
+  "portfoliosProcessed": 17,
+  "skipped": [
+    "Penny",
+    "Ndaitavela",
+    "Nambuli"
+  ],
+  "scriptsCreated": [
+    "portfolio-batch/scripts/create-student-evidence-prs.ps1",
+    "portfolio-batch/scripts/create-student-evidence-prs.sh"
+  ],
+  "pdfFailures": [],
+  "portfolios": [
+    {
+      "studentName": "Valentina Correia",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\correia-vp-sitespy-portfolio",
+      "repo": "Valentina-Correia/ValentinaCorreiaPortfolio",
+      "liveUrl": "https://Valentina-Correia.github.io/ValentinaCorreiaPortfolio/",
+      "theme": "Data/reporting workspace",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Haipumbu Beatha NP",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\haipumbu-bnp-sitespy-portfolio",
+      "repo": "beathapawana-dot/HaipumbuBeathaNPPortfolio",
+      "liveUrl": "https://beathapawana-dot.github.io/HaipumbuBeathaNPPortfolio/",
+      "theme": "Calculation lab",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Hamberera Karl PM",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\hamberera-mkp-sitespy-portfolio",
+      "repo": "karlhamberera/HambereraKarlPMPortfolio",
+      "liveUrl": "https://karlhamberera.github.io/HambereraKarlPMPortfolio/",
+      "theme": "Database systems board",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Hamukwaya NP Petrus",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\hamukwaya-pnp-sitespy-portfolio",
+      "repo": "ramuntu/HamukwayaNPPetrusPortfolio",
+      "liveUrl": "https://ramuntu.github.io/HamukwayaNPPetrusPortfolio/",
+      "theme": "Access control console",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Martha Heita",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\heita-mn-sitespy-portfolio",
+      "repo": "marthandilimengungo-dotcom/MarthaHeitaPortfolio",
+      "liveUrl": "https://marthandilimengungo-dotcom.github.io/MarthaHeitaPortfolio/",
+      "theme": "Interface quality desk",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Hilda Iita",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\iita-hn-sitespy-portfolio",
+      "repo": "next-GenCoder/HildaIitaPortfolio",
+      "liveUrl": "https://next-GenCoder.github.io/HildaIitaPortfolio/",
+      "theme": "Quality pipeline view",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Mathias Jonas",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\jonas-mm-sitespy-portfolio",
+      "repo": "Mathias4040/MathiasJonasPortfolio",
+      "liveUrl": "https://Mathias4040.github.io/MathiasJonasPortfolio/",
+      "theme": "Project workflow map",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Klaudia Kambowe",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\kambowe-kn-sitespy-portfolio",
+      "repo": "kambowe/KlaudiaKambowePortfolio",
+      "liveUrl": "https://kambowe.github.io/KlaudiaKambowePortfolio/",
+      "theme": "Service operations panel",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Tunacky Kandere",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\kandere-ndl-sitespy-portfolio",
+      "repo": "tunackykandere-lab/TunackyKanderePortfolio",
+      "liveUrl": "https://tunackykandere-lab.github.io/TunackyKanderePortfolio/",
+      "theme": "Mobile app showcase",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Johannes M Kandjeke",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\kandjeke-jm-sitespy-portfolio",
+      "repo": "kandjekejohannes54/JohannesMKandjekePortfolio",
+      "liveUrl": "https://kandjekejohannes54.github.io/JohannesMKandjekePortfolio/",
+      "theme": "Academic computing brief",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Amalia Mangundu",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\mangundu-a-sitespy-portfolio",
+      "repo": "amaliamangundu-tech/AmaliaMangunduPortfolio",
+      "liveUrl": "https://amaliamangundu-tech.github.io/AmaliaMangunduPortfolio/",
+      "theme": "Product settings case study",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Washington Matattias",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\matattias-w-sitespy-portfolio",
+      "repo": "matattiasw-ai/WashingtonMatattiasPortfolio",
+      "liveUrl": "https://matattiasw-ai.github.io/WashingtonMatattiasPortfolio/",
+      "theme": "Release coordination dashboard",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Kavakuru Metarere",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\metare-k-sitespy-portfolio",
+      "repo": "Kavakuru-Metarere7/KavakuruMetarerePortfolio",
+      "liveUrl": "https://Kavakuru-Metarere7.github.io/KavakuruMetarerePortfolio/",
+      "theme": "Sign-in flow case study",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Emilly Ndapuka",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\ndapuka-eii-sitespy-portfolio",
+      "repo": "emilly20-06/EmillyNdapukaPortfolio",
+      "liveUrl": "https://emilly20-06.github.io/EmillyNdapukaPortfolio/",
+      "theme": "Field form builder",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Shikongo Linus TK",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\shikongo-ltk-sitespy-portfolio",
+      "repo": "Linus45-blid/ShikongoLinusTKPortfolio",
+      "liveUrl": "https://Linus45-blid.github.io/ShikongoLinusTKPortfolio/",
+      "theme": "Deployment engineering log",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Hilma Shuumbwa",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\shuumbwa-hmn-sitespy-portfolio",
+      "repo": "hilma-shuumbwa/HilmaShuumbwaPortfolio",
+      "liveUrl": "https://hilma-shuumbwa.github.io/HilmaShuumbwaPortfolio/",
+      "theme": "Runtime configuration map",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    },
+    {
+      "studentName": "Tjatindi Michael Kazundire",
+      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\tjatindi-mk-sitespy-portfolio",
+      "repo": "IcyBeibi68023/TjatindiMichaelKazundirePortfolio",
+      "liveUrl": "https://IcyBeibi68023.github.io/TjatindiMichaelKazundirePortfolio/",
+      "theme": "Security review console",
+      "filesChanged": [
+        "site/index.html",
+        "site/styles.css",
+        "site/script.js",
+        "site/evidence.json",
+        "docs/presentation-guide.md",
+        "docs/contribution-report.md",
+        "docs/screenshot-capture-guide.md",
+        "docs/presentation-guide.pdf",
+        "docs/contribution-report.pdf"
+      ],
+      "evidenceShown": 0,
+      "evidenceHidden": true,
+      "pdfStatus": "created",
+      "screenshotsStillRequired": [
+        "live-homepage.png",
+        "github-repository-main.png",
+        "github-actions-success.png",
+        "commit-history.png",
+        "development-branch.png",
+        "pull-request.png",
+        "project-app-screen.png",
+        "code-contribution.png",
+        "documentation-contribution.png",
+        "certificate-or-proof.png"
+      ],
+      "deploymentStatus": "pending rerun",
+      "nextManualActions": [
+        "Capture real screenshots",
+        "Run evidence PR script",
+        "Verify GitHub Actions deployment"
+      ]
+    }
+  ],
+  "nextManualActions": [
+    "Capture real screenshots",
+    "Run student evidence PR automation",
+    "Redeploy after evidence is added"
+  ]
+}

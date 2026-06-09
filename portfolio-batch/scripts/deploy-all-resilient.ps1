@@ -1,222 +1,160 @@
 param(
   [string]$ConfigPath = "portfolio-batch/deployment-config.local.json",
+  [string]$SingleStudent = "",
   [switch]$Watch
 )
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Continue"
 
-function Resolve-RepoPath {
-  param([Parameter(Mandatory=$true)][string]$Path)
+$root = (Get-Location).Path
+$configFullPath = Join-Path $root $ConfigPath
+$script = Join-Path $root "portfolio-batch/scripts/deploy-portfolio.ps1"
 
-  if ([System.IO.Path]::IsPathRooted($Path)) {
-    return $Path
-  }
-
-  return (Join-Path (Get-Location).Path $Path)
-}
-
-function New-Result {
-  param(
-    [object]$Item,
-    [string]$Status,
-    [string]$Reason,
-    [string]$LiveUrl
-  )
-
-  [PSCustomObject]@{
-    studentName = [string]$Item.studentName
-    githubUsername = [string]$Item.githubUsername
-    studentEmail = [string]$Item.studentEmail
-    repoName = [string]$Item.repoName
-    portfolioPath = [string]$Item.portfolioPath
-    tokenEnvironmentVariable = [string]$Item.tokenEnvironmentVariable
-    status = $Status
-    reason = $Reason
-    expectedLiveUrl = $LiveUrl
-    completedAt = (Get-Date).ToString("o")
-  }
-}
-
-function Add-LogLine {
-  param(
-    [System.Collections.Generic.List[string]]$Lines,
-    [string]$Text
-  )
-
-  $Lines.Add($Text) | Out-Null
-}
-
-$scriptRoot = $PSScriptRoot
-$repoRoot = (Resolve-Path (Join-Path $scriptRoot "..\..")).Path
-$configFullPath = Resolve-RepoPath $ConfigPath
-$examplePath = Join-Path $repoRoot "portfolio-batch\deployment-config.local.json.example"
-$deployScript = Join-Path $scriptRoot "deploy-portfolio.ps1"
-$logsDir = Join-Path $repoRoot "portfolio-batch\logs"
-
-if (!(Test-Path -LiteralPath $configFullPath)) {
-  if (!(Test-Path -LiteralPath $examplePath)) {
-    throw "Config file is missing and example file was not found: $examplePath"
-  }
-
-  Copy-Item -LiteralPath $examplePath -Destination $configFullPath -Force
-  Write-Host "Created local deployment config: $configFullPath"
-  Write-Host "Edit portfolio-batch/deployment-config.local.json first, set token environment variables, then rerun this script."
+if (!(Test-Path -LiteralPath $configFullPath -PathType Leaf)) {
+  Write-Error "Config file not found: $ConfigPath"
   exit 1
 }
 
-if (!(Test-Path -LiteralPath $deployScript)) {
-  throw "Deploy script not found: $deployScript"
-}
-
-$configText = Get-Content -Raw -LiteralPath $configFullPath
-try {
-  $parsedConfig = $configText | ConvertFrom-Json
-} catch {
-  Write-Host "Invalid JSON config: $configFullPath"
-  Write-Host $_.Exception.Message
+if (!(Test-Path -LiteralPath $script -PathType Leaf)) {
+  Write-Error "Deploy script not found: $script"
   exit 1
 }
 
-$config = @()
-foreach ($entry in $parsedConfig) {
-  $config += $entry
+$config = Get-Content -LiteralPath $configFullPath -Raw | ConvertFrom-Json
+
+if (![string]::IsNullOrWhiteSpace($SingleStudent)) {
+  $config = @($config | Where-Object { $_.studentName -eq $SingleStudent })
 }
 
-if ($config.Count -eq 0) {
-  Write-Host "Deployment config has no portfolio entries: $configFullPath"
-  exit 1
-}
+$stamp = Get-Date -Format "yyyyMMdd-HHmmss"
+$logDir = Join-Path $root "portfolio-batch/logs"
+New-Item -ItemType Directory -Force -Path $logDir | Out-Null
+$mdLog = Join-Path $logDir "deployment-run-$stamp.md"
+$jsonLog = Join-Path $logDir "deployment-run-$stamp.json"
 
-New-Item -ItemType Directory -Force -Path $logsDir | Out-Null
-$timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
-$markdownLog = Join-Path $logsDir "deployment-run-$timestamp.md"
-$jsonLog = Join-Path $logsDir "deployment-run-$timestamp.json"
-$lines = [System.Collections.Generic.List[string]]::new()
-$results = [System.Collections.Generic.List[object]]::new()
-
-Add-LogLine $lines "# SiteSpy Portfolio Deployment Run"
-Add-LogLine $lines ""
-Add-LogLine $lines "- Started: $(Get-Date -Format o)"
-Add-LogLine $lines "- Config: `$ConfigPath`"
-Add-LogLine $lines "- Watch: $([bool]$Watch)"
-Add-LogLine $lines ""
-Add-LogLine $lines "## Results"
-Add-LogLine $lines ""
-Add-LogLine $lines "| Student | Repo | Status | Reason | Expected Live URL |"
-Add-LogLine $lines "|---|---|---|---|---|"
+$results = @()
 
 foreach ($item in $config) {
-  $studentName = [string]$item.studentName
+  $student = [string]$item.studentName
   $repoName = [string]$item.repoName
-  $githubUsername = [string]$item.githubUsername
-  $studentEmail = [string]$item.studentEmail
+  $ghUser = [string]$item.githubUsername
+  $email = [string]$item.studentEmail
   $portfolioPath = [string]$item.portfolioPath
-  $tokenEnvironmentVariable = [string]$item.tokenEnvironmentVariable
-  $liveUrl = if ($githubUsername -and $repoName) { "https://$githubUsername.github.io/$repoName/" } else { "" }
+  $tokenEnv = [string]$item.tokenEnvironmentVariable
+  $repo = "$ghUser/$repoName"
 
   Write-Host ""
-  Write-Host "Student: $studentName"
+  Write-Host "Student: $student"
   Write-Host "Repo: $repoName"
 
-  $skipReason = $null
-  if ([string]::IsNullOrWhiteSpace($portfolioPath)) {
-    $skipReason = "portfolioPath is missing from config"
-  } elseif (!(Test-Path -LiteralPath $portfolioPath)) {
-    $skipReason = "PortfolioPath does not exist"
-  } elseif (!(Test-Path -LiteralPath (Join-Path $portfolioPath "site\index.html"))) {
-    $skipReason = "site/index.html is missing"
-  } elseif ([string]::IsNullOrWhiteSpace($tokenEnvironmentVariable)) {
-    $skipReason = "tokenEnvironmentVariable is missing from config"
-  } elseif ([string]::IsNullOrWhiteSpace([Environment]::GetEnvironmentVariable($tokenEnvironmentVariable))) {
-    $skipReason = "token environment variable is missing"
+  $record = [ordered]@{
+    studentName = $student
+    repo = $repo
+    status = "pending"
+    reason = ""
+    liveUrl = "https://$ghUser.github.io/$repoName/"
+    events = @()
   }
 
-  if ($skipReason) {
-    Write-Host "SKIP: $skipReason"
-    $result = New-Result -Item $item -Status "SKIPPED" -Reason $skipReason -LiveUrl $liveUrl
-    $results.Add($result) | Out-Null
-    Add-LogLine $lines "| $studentName | $repoName | SKIPPED | $skipReason | $liveUrl |"
+  if ([string]::IsNullOrWhiteSpace($tokenEnv) -or [string]::IsNullOrWhiteSpace([Environment]::GetEnvironmentVariable($tokenEnv, "Process"))) {
+    Write-Host "SKIP: token environment variable is missing"
+    $record.status = "skipped"
+    $record.reason = "token missing: $tokenEnv"
+    $results += [pscustomobject]$record
     continue
   }
 
-  try {
-    $arguments = @{
-      PortfolioPath = $portfolioPath
-      StudentName = $studentName
-      GithubUsername = $githubUsername
-      StudentEmail = $studentEmail
-      RepoName = $repoName
-      TokenEnvironmentVariable = $tokenEnvironmentVariable
-    }
-
-    & $deployScript @arguments -Watch:$Watch
-    if ($LASTEXITCODE -ne 0) {
-      throw "deploy-portfolio.ps1 exited with code $LASTEXITCODE"
-    }
-
-    Write-Host "SUCCESS: $liveUrl"
-    $result = New-Result -Item $item -Status "SUCCESS" -Reason "" -LiveUrl $liveUrl
-    $results.Add($result) | Out-Null
-    Add-LogLine $lines "| $studentName | $repoName | SUCCESS |  | $liveUrl |"
-  } catch {
-    $message = $_.Exception.Message
-    Write-Host "FAILED: $message"
-    $result = New-Result -Item $item -Status "FAILED" -Reason $message -LiveUrl $liveUrl
-    $results.Add($result) | Out-Null
-    Add-LogLine $lines "| $studentName | $repoName | FAILED | $message | $liveUrl |"
-    Remove-Item Env:\GH_TOKEN -ErrorAction SilentlyContinue
+  if ([string]::IsNullOrWhiteSpace($portfolioPath) -or !(Test-Path -LiteralPath $portfolioPath -PathType Container)) {
+    Write-Host "SKIP: portfolio path missing"
+    $record.status = "skipped"
+    $record.reason = "portfolio path missing"
+    $results += [pscustomobject]$record
     continue
   }
-}
 
-$successful = @($results | Where-Object { $_.status -eq "SUCCESS" })
-$missingToken = @($results | Where-Object { $_.status -eq "SKIPPED" -and $_.reason -eq "token environment variable is missing" })
-$missingFiles = @($results | Where-Object { $_.status -eq "SKIPPED" -and ($_.reason -ne "token environment variable is missing") })
-$failed = @($results | Where-Object { $_.status -eq "FAILED" })
-
-Add-LogLine $lines ""
-Add-LogLine $lines "## Summary"
-Add-LogLine $lines ""
-Add-LogLine $lines "- Total portfolios: $($results.Count)"
-Add-LogLine $lines "- Successful deployments: $($successful.Count)"
-Add-LogLine $lines "- Skipped due to missing token: $($missingToken.Count)"
-Add-LogLine $lines "- Skipped due to missing files/config: $($missingFiles.Count)"
-Add-LogLine $lines "- Failed deployments: $($failed.Count)"
-Add-LogLine $lines ""
-Add-LogLine $lines "## Expected Live URLs"
-Add-LogLine $lines ""
-foreach ($result in $results) {
-  if (![string]::IsNullOrWhiteSpace($result.expectedLiveUrl)) {
-    Add-LogLine $lines "- $($result.studentName): $($result.expectedLiveUrl)"
+  if (!(Test-Path -LiteralPath (Join-Path $portfolioPath "site/index.html") -PathType Leaf)) {
+    Write-Host "SKIP: site/index.html missing"
+    $record.status = "skipped"
+    $record.reason = "site/index.html missing"
+    $results += [pscustomobject]$record
+    continue
   }
+
+  $args = @(
+    "-ExecutionPolicy", "Bypass",
+    "-NoProfile",
+    "-File", $script,
+    "-PortfolioPath", $portfolioPath,
+    "-StudentName", $student,
+    "-GithubUsername", $ghUser,
+    "-StudentEmail", $email,
+    "-RepoName", $repoName,
+    "-TokenEnvironmentVariable", $tokenEnv
+  )
+  if ($Watch) { $args += "-Watch" }
+
+  $output = & powershell @args 2>&1
+  $exitCode = $LASTEXITCODE
+
+  foreach ($line in $output) {
+    $text = [string]$line
+    Write-Host $text
+    if ($text.StartsWith("[deploy-event]")) {
+      $record.events += $text
+    }
+  }
+
+  if ($exitCode -eq 0) {
+    $record.status = "success"
+    $record.reason = "deployed"
+  } else {
+    $record.status = "failed"
+    $record.reason = (($output | Out-String).Trim())
+    Write-Host "FAILED: deployment exited with code $exitCode"
+  }
+
+  $results += [pscustomobject]$record
 }
 
-$summary = [PSCustomObject]@{
-  startedAt = $timestamp
-  totalPortfolios = $results.Count
-  successfulDeployments = $successful.Count
-  skippedDueToMissingToken = $missingToken.Count
-  skippedDueToMissingFiles = $missingFiles.Count
-  failedDeployments = $failed.Count
-  results = @($results)
+$total = $results.Count
+$success = @($results | Where-Object { $_.status -eq "success" }).Count
+$skippedToken = @($results | Where-Object { $_.reason -like "token missing*" }).Count
+$skippedFiles = @($results | Where-Object { $_.status -eq "skipped" -and $_.reason -notlike "token missing*" }).Count
+$failed = @($results | Where-Object { $_.status -eq "failed" }).Count
+
+$md = @()
+$md += "# Portfolio Deployment Run - $stamp"
+$md += ""
+$md += "- Total portfolios: $total"
+$md += "- Successful deployments: $success"
+$md += "- Skipped due to missing token: $skippedToken"
+$md += "- Skipped due to missing files/config: $skippedFiles"
+$md += "- Failed deployments: $failed"
+$md += ""
+$md += "## Results"
+foreach ($r in $results) {
+  $md += "- $($r.studentName): $($r.status) - $($r.reason) - $($r.liveUrl)"
+}
+$md += ""
+$md += "## Expected Live URLs"
+foreach ($r in $results) {
+  $md += "- $($r.studentName): $($r.liveUrl)"
 }
 
-$lines | Set-Content -LiteralPath $markdownLog -Encoding UTF8
-$summary | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $jsonLog -Encoding UTF8
+$md | Set-Content -LiteralPath $mdLog -Encoding UTF8
+$results | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath $jsonLog -Encoding UTF8
 
 Write-Host ""
 Write-Host "Summary"
-Write-Host "Total portfolios: $($results.Count)"
-Write-Host "Successful deployments: $($successful.Count)"
-Write-Host "Skipped due to missing token: $($missingToken.Count)"
-Write-Host "Skipped due to missing files/config: $($missingFiles.Count)"
-Write-Host "Failed deployments: $($failed.Count)"
-Write-Host "Markdown log: $markdownLog"
+Write-Host "Total portfolios: $total"
+Write-Host "Successful deployments: $success"
+Write-Host "Skipped due to missing token: $skippedToken"
+Write-Host "Skipped due to missing files/config: $skippedFiles"
+Write-Host "Failed deployments: $failed"
+Write-Host "Markdown log: $mdLog"
 Write-Host "JSON log: $jsonLog"
 Write-Host ""
 Write-Host "Expected live URLs:"
-foreach ($result in $results) {
-  if (![string]::IsNullOrWhiteSpace($result.expectedLiveUrl)) {
-    Write-Host "- $($result.studentName): $($result.expectedLiveUrl)"
-  }
+foreach ($r in $results) {
+  Write-Host "- $($r.studentName): $($r.liveUrl)"
 }

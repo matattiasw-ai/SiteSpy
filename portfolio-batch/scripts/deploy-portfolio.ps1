@@ -9,145 +9,211 @@ param(
   [switch]$Watch
 )
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Continue"
 
-function Invoke-Checked {
+function Stop-Deploy([string]$Message) {
+  Write-Error $Message
+  exit 1
+}
+
+function Clean-Identity([string]$Value) {
+  return (($Value -replace "[\r\n]+", " ") -replace "\s+", " ").Trim()
+}
+
+function Redact-Text([string]$Text, [string]$Token) {
+  if ([string]::IsNullOrEmpty($Text) -or [string]::IsNullOrEmpty($Token)) {
+    return $Text
+  }
+  return $Text.Replace($Token, "[REDACTED_TOKEN]")
+}
+
+function Invoke-GitChecked {
   param(
-    [Parameter(Mandatory=$true)][string]$Command,
+    [Parameter(Mandatory=$true)][string]$RepoPath,
     [Parameter(Mandatory=$true)][string[]]$Arguments,
-    [string]$FailureMessage
+    [Parameter(Mandatory=$true)][string]$FailureMessage
   )
 
-  $output = & $Command @Arguments 2>&1
+  $output = (& git -C $RepoPath @Arguments 2>&1)
   $exitCode = $LASTEXITCODE
+  Write-Host "[deploy-event] git_exit=$($Arguments -join ' ') code=$exitCode"
   if ($exitCode -ne 0) {
-    $details = ($output | Out-String).Trim()
-    if ([string]::IsNullOrWhiteSpace($details)) {
-      $details = "exit code $exitCode"
-    }
-
-    if ([string]::IsNullOrWhiteSpace($FailureMessage)) {
-      throw $details
-    }
-
-    throw "$FailureMessage $details"
+    $text = (($output | Out-String).Trim())
+    Stop-Deploy "$FailureMessage in $RepoPath`: $text"
   }
-
   return $output
 }
 
-function Invoke-Status {
-  param(
-    [Parameter(Mandatory=$true)][string]$Command,
-    [Parameter(Mandatory=$true)][string[]]$Arguments
-  )
-
-  $output = & $Command @Arguments 2>&1
-  [PSCustomObject]@{
-    ExitCode = $LASTEXITCODE
-    Output = ($output | Out-String).Trim()
-  }
+if (!(Get-Command git -ErrorAction SilentlyContinue)) {
+  Stop-Deploy "git is required."
 }
 
-if (!(Test-Path -LiteralPath $PortfolioPath)) { throw "PortfolioPath does not exist." }
-$resolved = (Resolve-Path -LiteralPath $PortfolioPath).Path
-if (!(Test-Path -LiteralPath (Join-Path $resolved "site/index.html"))) { throw "site/index.html is missing." }
-if (!(Get-Command git -ErrorAction SilentlyContinue)) { throw "git is required." }
-if (!(Get-Command gh -ErrorAction SilentlyContinue)) { throw "GitHub CLI is required." }
+if (!(Get-Command gh -ErrorAction SilentlyContinue)) {
+  Stop-Deploy "GitHub CLI is required."
+}
 
-$token = [Environment]::GetEnvironmentVariable($TokenEnvironmentVariable)
+if (!(Test-Path -LiteralPath $PortfolioPath -PathType Container)) {
+  Stop-Deploy "PortfolioPath does not exist: $PortfolioPath"
+}
+
+$repoPath = (Resolve-Path -LiteralPath $PortfolioPath).Path
+$indexPath = Join-Path $repoPath "site/index.html"
+if (!(Test-Path -LiteralPath $indexPath -PathType Leaf)) {
+  Stop-Deploy "site/index.html is missing in $repoPath"
+}
+
+$token = [Environment]::GetEnvironmentVariable($TokenEnvironmentVariable, "Process")
 if ([string]::IsNullOrWhiteSpace($token)) {
-  throw "Token environment variable is missing. Set it locally. Do not commit tokens."
+  Stop-Deploy "Token environment variable is missing: $TokenEnvironmentVariable"
 }
 
 $repo = "$GithubUsername/$RepoName"
-$liveUrl = "https://$GithubUsername.github.io/$RepoName/"
+$oldGhToken = [Environment]::GetEnvironmentVariable("GH_TOKEN", "Process")
 $env:GH_TOKEN = $token
 
 try {
-  $tokenOwner = (Invoke-Checked -Command "gh" -Arguments @("api", "user", "--jq", ".login") -FailureMessage "Could not validate GitHub token owner.").Trim()
-  if ($tokenOwner.ToLowerInvariant() -ne $GithubUsername.ToLowerInvariant()) {
-    throw "Token belongs to $tokenOwner, but config expects $GithubUsername. Use the correct student token or fix config."
+  $loginOutput = (& gh api user --jq ".login" 2>&1)
+  if ($LASTEXITCODE -ne 0) {
+    Stop-Deploy "Could not verify GitHub token owner: $(Redact-Text (($loginOutput | Out-String).Trim()) $token)"
   }
-  Write-Output "[deploy-event] token_owner_verified=$tokenOwner"
 
-  Push-Location $resolved
-  try {
-    $ignore = ".gitignore"
-    $protected = @("private-docs/", ".env", ".env.local", "*.token", "tokens.txt", "gittoken.txt", "token.txt")
-    if (!(Test-Path $ignore)) { New-Item -ItemType File -Path $ignore | Out-Null }
-    $existing = @(Get-Content $ignore -ErrorAction SilentlyContinue)
-    foreach ($line in $protected) {
-      if ($existing -notcontains $line) { Add-Content -Path $ignore -Value $line }
+  $login = Clean-Identity (($loginOutput | Out-String).Trim())
+  if ($login -ne $GithubUsername) {
+    Stop-Deploy "Token belongs to $login, but config expects $GithubUsername. Use the correct student token or fix config."
+  }
+  Write-Host "[deploy-event] token_owner_verified=$login"
+
+  $gitDir = Join-Path $repoPath ".git"
+  Write-Host "[deploy-event] repo_path=$repoPath"
+  Write-Host "[deploy-event] git_exists=$([bool](Test-Path -LiteralPath $gitDir -PathType Container))"
+
+  if (!(Test-Path -LiteralPath $gitDir -PathType Container)) {
+    Invoke-GitChecked -RepoPath $repoPath -Arguments @("init") -FailureMessage "git init failed" | Out-Null
+    Write-Host "[deploy-event] git_initialized=$repoPath"
+  }
+
+  Invoke-GitChecked -RepoPath $repoPath -Arguments @("branch", "-M", "main") -FailureMessage "Failed to set branch main" | Out-Null
+
+  $safeName = Clean-Identity $StudentName
+  if ([string]::IsNullOrWhiteSpace($safeName)) {
+    $safeName = $GithubUsername
+  }
+
+  $safeEmail = Clean-Identity $StudentEmail
+  if ([string]::IsNullOrWhiteSpace($safeEmail) -or $safeEmail -notmatch "@") {
+    $safeEmail = "$GithubUsername@users.noreply.github.com"
+  }
+
+  Write-Host "[deploy-event] intended_git_user_name=$safeName"
+  Write-Host "[deploy-event] intended_git_user_email=$safeEmail"
+
+  Invoke-GitChecked -RepoPath $repoPath -Arguments @("config", "user.name", $safeName) -FailureMessage "Failed to set git user.name" | Out-Null
+  Invoke-GitChecked -RepoPath $repoPath -Arguments @("config", "user.email", $safeEmail) -FailureMessage "Failed to set git user.email" | Out-Null
+  Write-Host "[deploy-event] git_identity_set=$repoPath"
+
+  $ignorePath = Join-Path $repoPath ".gitignore"
+  if (!(Test-Path -LiteralPath $ignorePath -PathType Leaf)) {
+    New-Item -ItemType File -Path $ignorePath | Out-Null
+  }
+
+  $ignoreLines = @(
+    "private-docs/",
+    ".env",
+    ".env.local",
+    "*.token",
+    "tokens.txt",
+    "gittoken.txt",
+    "token.txt",
+    ".venv/",
+    "__pycache__/",
+    "build/",
+    "dist/"
+  )
+  $existingIgnore = @(Get-Content -LiteralPath $ignorePath -ErrorAction SilentlyContinue)
+  foreach ($line in $ignoreLines) {
+    if ($existingIgnore -notcontains $line) {
+      Add-Content -LiteralPath $ignorePath -Value $line
     }
+  }
 
-    if (!(Test-Path ".git")) {
-      Invoke-Checked -Command "git" -Arguments @("init") -FailureMessage "git init failed." | Out-Null
+  Invoke-GitChecked -RepoPath $repoPath -Arguments @("add", ".") -FailureMessage "git add failed" | Out-Null
+  $status = (& git -C $repoPath status --porcelain)
+  if ($status) {
+    Invoke-GitChecked -RepoPath $repoPath -Arguments @("commit", "-m", $CommitMessage) -FailureMessage "git commit failed" | Out-Null
+    Write-Host "[deploy-event] committed=$repo"
+  } else {
+    Write-Host "[deploy-event] no_local_changes=$repo"
+  }
+
+  $repoExists = $false
+  gh repo view $repo *> $null
+  if ($LASTEXITCODE -eq 0) {
+    $repoExists = $true
+    Write-Host "[deploy-event] repo_exists=$repo"
+  } else {
+    Write-Host "[deploy-event] repo_missing=$repo"
+  }
+
+  if (-not $repoExists) {
+    Write-Host "[deploy-event] creating_repo=$repo"
+    $createOutput = (& gh repo create $repo --public 2>&1)
+    if ($LASTEXITCODE -ne 0) {
+      Stop-Deploy "Failed to create repo $repo`: $(Redact-Text (($createOutput | Out-String).Trim()) $token)"
     }
+    Write-Host "[deploy-event] repo_created=$repo"
+  }
 
-    Invoke-Checked -Command "git" -Arguments @("config", "user.name", $StudentName) -FailureMessage "git config user.name failed." | Out-Null
-    Invoke-Checked -Command "git" -Arguments @("config", "user.email", $StudentEmail) -FailureMessage "git config user.email failed." | Out-Null
-    Invoke-Checked -Command "git" -Arguments @("branch", "-M", "main") -FailureMessage "git branch setup failed." | Out-Null
-    Invoke-Checked -Command "git" -Arguments @("add", ".") -FailureMessage "git add failed." | Out-Null
+  & git -C $repoPath remote remove origin 2>$null
+  Invoke-GitChecked -RepoPath $repoPath -Arguments @("remote", "add", "origin", "https://github.com/$repo.git") -FailureMessage "Failed to set origin" | Out-Null
 
-    $status = (Invoke-Checked -Command "git" -Arguments @("status", "--porcelain") -FailureMessage "git status failed." | Out-String).Trim()
-    if ($status.Length -gt 0) {
-      Invoke-Checked -Command "git" -Arguments @("commit", "-m", $CommitMessage) -FailureMessage "git commit failed." | Out-Null
-      Write-Output "[deploy-event] committed"
-    } else {
-      Write-Output "[deploy-event] no_local_changes"
-    }
+  $pushUrl = "https://x-access-token:$token@github.com/$repo.git"
+  $pushOutput = (& git -C $repoPath push -u $pushUrl main 2>&1)
+  if ($LASTEXITCODE -ne 0) {
+    Stop-Deploy "Failed to push repo $repo`: $(Redact-Text (($pushOutput | Out-String).Trim()) $token)"
+  }
+  Write-Host "[deploy-event] pushed=$repo"
 
-    $repoExists = $false
-    gh repo view $repo *> $null
-    if ($LASTEXITCODE -eq 0) {
-      $repoExists = $true
-      Write-Output "[deploy-event] repo_exists=$repo"
-      Write-Output "[deploy-event] repo_existed"
-    } else {
-      Write-Output "[deploy-event] repo_missing=$repo"
-    }
-
-    if (-not $repoExists) {
-      Write-Output "[deploy-event] creating_repo=$repo"
-      gh repo create $repo --public --source . --remote origin --push
-      if ($LASTEXITCODE -ne 0) { throw "Failed to create repo $repo" }
-      Write-Output "[deploy-event] repo_created"
-      Write-Output "[deploy-event] pushed"
-    } else {
-      git remote remove origin 2>$null
-      git remote add origin "https://github.com/$repo.git"
-      $authHeader = "AUTHORIZATION: bearer $token"
-      git -c "http.https://github.com/.extraheader=$authHeader" push -u origin main
-      if ($LASTEXITCODE -ne 0) { throw "Failed to push repo $repo" }
-      Write-Output "[deploy-event] pushed"
-    }
-
-    $pagesPost = Invoke-Status -Command "gh" -Arguments @("api", "--method", "POST", "repos/$repo/pages", "-f", "build_type=workflow")
-    if ($pagesPost.ExitCode -eq 0) {
-      Write-Output "[deploy-event] pages_enabled"
-    } else {
-      Invoke-Checked -Command "gh" -Arguments @("api", "--method", "PUT", "repos/$repo/pages", "-f", "build_type=workflow") -FailureMessage "GitHub Pages setup failed." | Out-Null
-      Write-Output "[deploy-event] pages_confirmed"
-    }
-
-    Invoke-Checked -Command "gh" -Arguments @("workflow", "run", "Deploy Portfolio to GitHub Pages", "--repo", $repo, "--ref", "main") -FailureMessage "Workflow trigger failed." | Out-Null
-    Write-Output "[deploy-event] workflow_triggered"
-
-    if ($Watch) {
-      $watchResult = Invoke-Status -Command "gh" -Arguments @("run", "watch", "--repo", $repo)
-      if ($watchResult.ExitCode -ne 0) {
-        Invoke-Status -Command "gh" -Arguments @("run", "view", "--repo", $repo, "--log-failed") | Out-Null
-        Write-Output "[deploy-event] workflow_failed"
-        throw "Workflow failed. Review GitHub Actions logs for $repo."
+  $pagesOutput = (& gh api --method POST "repos/$repo/pages" -f build_type=workflow 2>&1)
+  if ($LASTEXITCODE -eq 0) {
+    Write-Host "[deploy-event] pages_enabled=$repo"
+  } else {
+    $pagesText = (($pagesOutput | Out-String).Trim())
+    if ($pagesText -match "already exists" -or $pagesText -match "already_exists" -or $pagesText -match "409") {
+      $putOutput = (& gh api --method PUT "repos/$repo/pages" -f build_type=workflow 2>&1)
+      if ($LASTEXITCODE -ne 0) {
+        Stop-Deploy "Pages update failed for $repo`: $(Redact-Text (($putOutput | Out-String).Trim()) $token)"
       }
-      Write-Output "[deploy-event] workflow_success"
+      Write-Host "[deploy-event] pages_updated=$repo"
+    } else {
+      Stop-Deploy "Pages setup failed for $repo`: $(Redact-Text $pagesText $token)"
     }
-
-    Write-Output "Expected live URL: $liveUrl"
-  } finally {
-    Pop-Location
   }
-} finally {
-  Remove-Item Env:\GH_TOKEN -ErrorAction SilentlyContinue
+
+  $workflowOutput = (& gh workflow run "Deploy Portfolio to GitHub Pages" --repo $repo --ref main 2>&1)
+  if ($LASTEXITCODE -ne 0) {
+    $workflowOutput = (& gh workflow run "deploy-pages.yml" --repo $repo --ref main 2>&1)
+    if ($LASTEXITCODE -ne 0) {
+      Stop-Deploy "workflow trigger failed for $repo`: $(Redact-Text (($workflowOutput | Out-String).Trim()) $token)"
+    }
+  }
+  Write-Host "[deploy-event] workflow_triggered=$repo"
+
+  if ($Watch) {
+    $watchOutput = (& gh run watch --repo $repo 2>&1)
+    if ($LASTEXITCODE -ne 0) {
+      & gh run view --repo $repo --log-failed
+      Stop-Deploy "workflow failed for $repo`: $(Redact-Text (($watchOutput | Out-String).Trim()) $token)"
+    }
+    Write-Host "[deploy-event] workflow_success=$repo"
+  }
+
+  Write-Host "Expected live URL: https://$GithubUsername.github.io/$RepoName/"
+  exit 0
+}
+finally {
+  if ([string]::IsNullOrWhiteSpace($oldGhToken)) {
+    Remove-Item Env:\GH_TOKEN -ErrorAction SilentlyContinue
+  } else {
+    $env:GH_TOKEN = $oldGhToken
+  }
 }
