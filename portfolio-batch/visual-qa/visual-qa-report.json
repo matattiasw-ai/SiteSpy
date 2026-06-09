@@ -1,0 +1,199 @@
+{
+  "generatedAt": "2026-06-10T00:03:46.862614",
+  "portfoliosRendered": 17,
+  "desktopScreenshots": 17,
+  "mobileScreenshots": 17,
+  "distinctLayoutFamilies": 17,
+  "layoutCounts": {
+    "data-chart-cards": 1,
+    "engineering-blueprint": 1,
+    "documentation-style": 1,
+    "security-interface": 1,
+    "soft-glass": 1,
+    "github-contribution": 1,
+    "analytics-dashboard": 1,
+    "modern-saas": 1,
+    "mobile-case-study": 1,
+    "academic-report": 1,
+    "product-landing": 1,
+    "presentation-deck": 1,
+    "split-timeline": 1,
+    "sidebar-profile": 1,
+    "terminal-console": 1,
+    "minimal-editorial": 1,
+    "magazine-feature": 1
+  },
+  "results": [
+    {
+      "studentName": "Valentina Correia",
+      "layout": "data-chart-cards",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\valentina-correia\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\valentina-correia\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1618
+    },
+    {
+      "studentName": "Haipumbu Beatha NP",
+      "layout": "engineering-blueprint",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\haipumbu-beatha-np\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\haipumbu-beatha-np\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1618
+    },
+    {
+      "studentName": "Hamberera Karl PM",
+      "layout": "documentation-style",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\hamberera-karl-pm\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\hamberera-karl-pm\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1605
+    },
+    {
+      "studentName": "Hamukwaya NP Petrus",
+      "layout": "security-interface",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\hamukwaya-np-petrus\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\hamukwaya-np-petrus\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1612
+    },
+    {
+      "studentName": "Martha Heita",
+      "layout": "soft-glass",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\martha-heita\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\martha-heita\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1601
+    },
+    {
+      "studentName": "Hilda Iita",
+      "layout": "github-contribution",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\hilda-iita\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\hilda-iita\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1537
+    },
+    {
+      "studentName": "Mathias Jonas",
+      "layout": "analytics-dashboard",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\mathias-jonas\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\mathias-jonas\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1525
+    },
+    {
+      "studentName": "Klaudia Kambowe",
+      "layout": "modern-saas",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\klaudia-kambowe\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\klaudia-kambowe\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1548
+    },
+    {
+      "studentName": "Tunacky Kandere",
+      "layout": "mobile-case-study",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\tunacky-kandere\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\tunacky-kandere\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1515
+    },
+    {
+      "studentName": "Johannes M Kandjeke",
+      "layout": "academic-report",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\johannes-m-kandjeke\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\johannes-m-kandjeke\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1370
+    },
+    {
+      "studentName": "Amalia Mangundu",
+      "layout": "product-landing",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\amalia-mangundu\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\amalia-mangundu\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1572
+    },
+    {
+      "studentName": "Washington Matattias",
+      "layout": "presentation-deck",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\washington-matattias\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\washington-matattias\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1446
+    },
+    {
+      "studentName": "Kavakuru Metarere",
+      "layout": "split-timeline",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\kavakuru-metarere\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\kavakuru-metarere\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1580
+    },
+    {
+      "studentName": "Emilly Ndapuka",
+      "layout": "sidebar-profile",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\emilly-ndapuka\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\emilly-ndapuka\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1422
+    },
+    {
+      "studentName": "Shikongo Linus TK",
+      "layout": "terminal-console",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\shikongo-linus-tk\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\shikongo-linus-tk\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1403
+    },
+    {
+      "studentName": "Hilma Shuumbwa",
+      "layout": "minimal-editorial",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\hilma-shuumbwa\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\hilma-shuumbwa\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1374
+    },
+    {
+      "studentName": "Tjatindi Michael Kazundire",
+      "layout": "magazine-feature",
+      "desktopScreenshot": "portfolio-batch\\visual-qa\\tjatindi-michael-kazundire\\desktop.png",
+      "mobileScreenshot": "portfolio-batch\\visual-qa\\tjatindi-michael-kazundire\\mobile.png",
+      "certificatesDisplayed": false,
+      "evidenceDisplayed": false,
+      "issues": [],
+      "textLength": 1539
+    }
+  ],
+  "failures": []
+}

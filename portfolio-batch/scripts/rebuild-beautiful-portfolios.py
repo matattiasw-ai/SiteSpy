@@ -337,10 +337,14 @@ def copy_reports(portfolio, site):
 def report_card(title, description, href, icon):
     return f"""
       <a class="document-card" href="{esc(href)}">
-        <span class="doc-icon">{esc(icon)}</span>
+        <span class="doc-icon">{svg_icon(icon)}</span>
         <strong>{esc(title)}</strong>
         <em>{esc(description)}</em>
       </a>"""
+
+
+def svg_icon(symbol):
+    return f"""<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"></circle><text x="12" y="15" text-anchor="middle">{esc(symbol)}</text></svg>"""
 
 
 def certificates_section(site, certificates, icon):
@@ -352,7 +356,7 @@ def certificates_section(site, certificates, icon):
         title = certificate.stem.replace("-", " ").replace("_", " ").title()
         if certificate.suffix.lower() == ".pdf":
             cards.append(
-                f"""<a class="certificate-card pdf-card" href="{esc(rel)}"><span>{esc(icon)}</span><strong>{esc(title)}</strong><em>Open Certificate</em></a>"""
+                f"""<a class="certificate-card pdf-card" href="{esc(rel)}"><span>{svg_icon(icon)}</span><strong>{esc(title)}</strong><em>Open Certificate</em></a>"""
             )
         else:
             cards.append(
@@ -360,7 +364,7 @@ def certificates_section(site, certificates, icon):
             )
     return f"""
     <section class="section certificate-section" id="certificates">
-      <div class="section-title"><span>{esc(icon)}</span><h2>Certificates</h2></div>
+      <div class="section-title"><span>{svg_icon(icon)}</span><h2>Certificates</h2></div>
       <div class="certificate-grid">{''.join(cards)}</div>
     </section>"""
 
@@ -377,7 +381,7 @@ def evidence_section(site, screenshots, icon):
         )
     return f"""
     <section class="section evidence-section" id="work-record">
-      <div class="section-title"><span>{esc(icon)}</span><h2>Project Evidence</h2></div>
+      <div class="section-title"><span>{svg_icon(icon)}</span><h2>Project Evidence</h2></div>
       <div class="evidence-grid">{''.join(cards)}</div>
     </section>"""
 
@@ -397,37 +401,37 @@ def layout_blocks(layout_id, item, assignment, layout, reports_html, cert_html, 
 
     common_sections = f"""
     <section class="section overview" id="overview">
-      <div class="section-title"><span>{esc(icon)}</span><h2>Project Overview</h2></div>
+      <div class="section-title"><span>{svg_icon(icon)}</span><h2>Project Overview</h2></div>
       <p>{esc(project_text)}</p>
     </section>
     <section class="section contribution" id="contribution">
-      <div class="section-title"><span>{esc(icon)}</span><h2>My Contribution</h2></div>
+      <div class="section-title"><span>{svg_icon(icon)}</span><h2>My Contribution</h2></div>
       <p>{esc(contribution)}</p>
     </section>
     <section class="section work-area">
-      <div class="section-title"><span>{esc(icon)}</span><h2>Key Work Area</h2></div>
+      <div class="section-title"><span>{svg_icon(icon)}</span><h2>Key Work Area</h2></div>
       <p>This portfolio presents a focused project area, practical learning, and the public report resources connected to my SiteSpy role.</p>
     </section>
     <section class="section skills" id="skills">
-      <div class="section-title"><span>{esc(icon)}</span><h2>Skills and Tools</h2></div>
+      <div class="section-title"><span>{svg_icon(icon)}</span><h2>Skills and Tools</h2></div>
       <ul class="skill-list">{skills}</ul>
     </section>
     <section class="section challenge">
-      <div class="section-title"><span>{esc(icon)}</span><h2>Challenge and Solution</h2></div>
+      <div class="section-title"><span>{svg_icon(icon)}</span><h2>Challenge and Solution</h2></div>
       <p>{esc(challenge)}</p>
     </section>
     <section class="section reflection">
-      <div class="section-title"><span>{esc(icon)}</span><h2>Learning Reflection</h2></div>
+      <div class="section-title"><span>{svg_icon(icon)}</span><h2>Learning Reflection</h2></div>
       <p>{esc(reflection)}</p>
     </section>
     {cert_html}
     {evidence_html}
     <section class="section reports" id="reports">
-      <div class="section-title"><span>{esc(icon)}</span><h2>Reports</h2></div>
+      <div class="section-title"><span>{svg_icon(icon)}</span><h2>Reports</h2></div>
       <div class="document-grid">{reports_html}</div>
     </section>
     <section class="section links" id="links">
-      <div class="section-title"><span>{esc(icon)}</span><h2>Repository and Live Links</h2></div>
+      <div class="section-title"><span>{svg_icon(icon)}</span><h2>Repository and Live Links</h2></div>
       <div class="link-row"><a href="{esc(repo_url)}">Repository</a><a href="{esc(live_url)}">Live Project</a></div>
     </section>"""
 
@@ -548,10 +552,8 @@ def build_css(layout):
     shape = layout["shape"]
     if layout_id == "terminal-console":
         extra = ".section{border-left:3px solid var(--accent)} .section-title h2::before{content:'./ ';color:var(--accent2)}"
-    elif layout_id == "engineering-blueprint":
-        extra = "body{background-image:linear-gradient(rgba(3,105,161,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(3,105,161,.10) 1px,transparent 1px);background-size:28px 28px}.section{border-style:dashed}"
     elif layout_id == "github-contribution":
-        extra = ".content-grid{grid-template-columns:repeat(7,1fr)}.section{min-height:130px}.overview,.contribution,.reports{grid-column:span 3}.skills,.challenge,.reflection,.links{grid-column:span 2}"
+        extra = """.hero{grid-template-columns:1fr;gap:12px}.hero>div{border-left:8px solid var(--accent);background:var(--surface);padding:24px;border-radius:var(--shape)}.hero-panel{grid-template-columns:repeat(4,1fr);display:grid}.content-grid{display:grid;grid-template-columns:160px 1fr;gap:0 18px}.section{grid-column:2;border-radius:8px;position:relative;margin-bottom:10px}.section::before{content:"";position:absolute;left:-26px;top:24px;width:14px;height:14px;border-radius:4px;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,transparent)}.content-grid::before{content:"";grid-column:1;grid-row:1 / span 8;border-right:3px solid color-mix(in srgb,var(--accent) 28%,transparent)}"""
     elif layout_id == "minimal-editorial":
         extra = ".section{box-shadow:none;border-width:0 0 1px 0;border-radius:0}.editorial-hero{text-align:left;border-bottom:3px solid var(--ink)}"
     elif layout_id == "presentation-deck":
@@ -564,6 +566,22 @@ def build_css(layout):
         extra = ".report-cover{border-bottom:4px double var(--accent);padding-bottom:24px}.report-columns{column-count:2;column-gap:26px}.section{break-inside:avoid}"
     elif layout_id == "magazine-feature":
         extra = ".magazine-cover h1{font-size:clamp(42px,8vw,82px)}.magazine-flow{display:block}.section{margin-bottom:18px}.section:nth-child(odd){margin-left:8vw}"
+    elif layout_id == "data-chart-cards":
+        extra = """.hero{grid-template-columns:.95fr 1.05fr}.hero>div{padding:26px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 13%,var(--surface)),var(--surface));border-radius:var(--shape);border:1px solid color-mix(in srgb,var(--accent) 22%,transparent)}.hero-panel{display:grid;grid-template-columns:repeat(2,1fr)}.hero-panel span{padding:10px;border-radius:8px;background:color-mix(in srgb,var(--accent2) 9%,var(--surface))}.content-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:14px}.section{box-shadow:none}.overview{grid-column:span 3;border-top:8px solid var(--accent)}.contribution,.challenge{grid-column:span 2}.skills .skill-list{display:grid;grid-template-columns:1fr}.reports,.links{grid-column:span 3}.section-title span{border-radius:8px}"""
+    elif layout_id == "analytics-dashboard":
+        extra = """.hero{grid-template-columns:1fr}.hero-panel{display:grid;grid-template-columns:repeat(4,1fr)}.content-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.overview{grid-column:span 2;grid-row:span 2}.contribution{grid-column:span 2}.skills,.challenge,.reflection,.reports,.links{grid-column:span 2}.section{border:0;box-shadow:0 12px 34px rgba(79,70,229,.12)}.section-title{border-bottom:1px solid color-mix(in srgb,var(--accent) 16%,transparent);padding-bottom:9px}.section-title span{border-radius:6px}"""
+    elif layout_id == "modern-saas":
+        extra = """.hero{grid-template-columns:1.2fr .8fr;min-height:360px}.hero>div{align-self:center}.hero-panel{border:0;background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 18%,var(--surface)),color-mix(in srgb,var(--accent2) 18%,var(--surface)));transform:rotate(1deg)}.content-grid{display:block}.section{display:grid;grid-template-columns:260px 1fr;gap:18px;align-items:start;margin-bottom:12px;border-left:6px solid var(--accent)}.section-title{margin:0}.reports .document-grid,.links .link-row{grid-column:2}.skills .skill-list{grid-column:2}.section-title span{border-radius:8px}"""
+    elif layout_id == "product-landing":
+        extra = """.hero{grid-template-columns:1fr;max-width:900px;margin-left:auto;margin-right:auto;text-align:center}.hero-panel{display:flex;justify-content:center;gap:16px;box-shadow:none}.content-grid{display:block;max-width:980px;margin-left:auto;margin-right:auto}.section{display:grid;grid-template-columns:80px 1fr;gap:18px;border:0;border-bottom:1px solid color-mix(in srgb,var(--accent) 18%,transparent);box-shadow:none;border-radius:0}.section-title{display:block}.section-title span{margin-bottom:8px}.skills .skill-list,.reports .document-grid,.links .link-row{grid-column:2}.overview{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 10%,var(--surface)),var(--surface));border-radius:18px;border-bottom:0}"""
+    elif layout_id == "documentation-style":
+        extra = """.hero{grid-template-columns:320px 1fr}.hero-panel{order:-1;position:sticky;top:18px;align-self:start}.content-grid{display:grid;grid-template-columns:280px 1fr;gap:16px}.content-grid::before{content:"Contents\\A 01 Overview\\A 02 Contribution\\A 03 Skills\\A 04 Reports";white-space:pre-line;grid-column:1;grid-row:1 / span 8;background:var(--surface);border:1px solid color-mix(in srgb,var(--accent) 18%,transparent);border-radius:var(--shape);padding:20px;color:var(--muted);font-weight:700}.section{grid-column:2;box-shadow:none;border-radius:4px}.section-title span{border-radius:4px}"""
+    elif layout_id == "engineering-blueprint":
+        extra = """body{background-image:linear-gradient(rgba(3,105,161,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(3,105,161,.10) 1px,transparent 1px);background-size:28px 28px}.hero{grid-template-columns:1fr;border:2px solid var(--accent);padding:18px}.hero-panel{display:flex;justify-content:space-between;box-shadow:none;border-style:dashed}.content-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.section{border-style:dashed;box-shadow:none}.overview,.reports{grid-column:span 2}.section-title span{border-radius:0}"""
+    elif layout_id == "security-interface":
+        extra = """.hero{grid-template-columns:1fr 1fr}.hero>div,.hero-panel,.section{background:linear-gradient(180deg,color-mix(in srgb,var(--surface) 96%,#000),var(--surface));box-shadow:0 0 0 1px rgba(239,68,68,.08),0 18px 40px rgba(0,0,0,.24)}.content-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.overview,.reports{grid-column:span 2}.section-title span{background:transparent;border:1px solid var(--accent);color:var(--accent);border-radius:8px}.skill-list li{background:rgba(239,68,68,.08)}"""
+    elif layout_id == "soft-glass":
+        extra = """.hero{grid-template-columns:.9fr 1.1fr}.hero>div,.hero-panel,.section{backdrop-filter:blur(18px);box-shadow:0 20px 60px rgba(99,102,241,.12)}.content-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}.overview,.contribution{grid-column:span 3}.skills{grid-column:span 2}.challenge,.reflection{grid-column:span 2}.reports,.links{grid-column:span 3}.section-title span{background:linear-gradient(135deg,var(--accent),var(--accent2))}"""
     else:
         extra = ".content-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.overview,.contribution,.reports{grid-column:span 2}.skills,.challenge,.reflection,.links{grid-column:span 1}"
     return f""":root {{
@@ -646,6 +664,9 @@ h3 {{ margin: 0; font-size: 17px; }}
 }}
 .section-title {{ display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }}
 .section-title span {{ display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center; color: var(--surface); background: var(--accent); border-radius: 50%; font-weight: 900; }}
+.section-title svg,.doc-icon svg,.certificate-card svg {{ width: 20px; height: 20px; display: block; }}
+.section-title svg circle,.doc-icon svg circle,.certificate-card svg circle {{ fill: transparent; }}
+.section-title svg text,.doc-icon svg text,.certificate-card svg text {{ fill: currentColor; font-size: 10px; font-family: Arial, sans-serif; font-weight: 900; }}
 .section p {{ margin: 0; color: var(--muted); }}
 .skill-list {{ list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }}
 .skill-list li {{ padding: 8px 10px; color: var(--ink); font-weight: 750; }}
@@ -685,6 +706,11 @@ h3 {{ margin: 0; font-size: 17px; }}
     grid-template-columns: 1fr;
     column-count: 1;
   }}
+  .hero-panel {{ display: grid !important; grid-template-columns: 1fr !important; transform: none !important; }}
+  .content-grid::before {{ display: none !important; }}
+  .section {{ display: block !important; grid-column: auto !important; grid-row: auto !important; }}
+  .reports .document-grid,.links .link-row,.skills .skill-list {{ grid-column: auto !important; }}
+  .document-grid,.certificate-grid,.evidence-grid,.link-row {{ grid-template-columns: 1fr !important; }}
   .section,.hero-panel,.profile-rail,.terminal-hero,.phone-hero,.report-cover,.magazine-cover,.editorial-hero,.hero-slide {{ padding: 16px; }}
   .profile-rail {{ position: static; }}
   .overview,.contribution,.reports,.skills,.challenge,.reflection,.links {{ grid-column: auto; }}

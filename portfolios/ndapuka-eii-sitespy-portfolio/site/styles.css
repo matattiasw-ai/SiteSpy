@@ -78,6 +78,9 @@ h3 { margin: 0; font-size: 17px; }
 }
 .section-title { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
 .section-title span { display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center; color: var(--surface); background: var(--accent); border-radius: 50%; font-weight: 900; }
+.section-title svg,.doc-icon svg,.certificate-card svg { width: 20px; height: 20px; display: block; }
+.section-title svg circle,.doc-icon svg circle,.certificate-card svg circle { fill: transparent; }
+.section-title svg text,.doc-icon svg text,.certificate-card svg text { fill: currentColor; font-size: 10px; font-family: Arial, sans-serif; font-weight: 900; }
 .section p { margin: 0; color: var(--muted); }
 .skill-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .skill-list li { padding: 8px 10px; color: var(--ink); font-weight: 750; }
@@ -117,6 +120,11 @@ h3 { margin: 0; font-size: 17px; }
     grid-template-columns: 1fr;
     column-count: 1;
   }
+  .hero-panel { display: grid !important; grid-template-columns: 1fr !important; transform: none !important; }
+  .content-grid::before { display: none !important; }
+  .section { display: block !important; grid-column: auto !important; grid-row: auto !important; }
+  .reports .document-grid,.links .link-row,.skills .skill-list { grid-column: auto !important; }
+  .document-grid,.certificate-grid,.evidence-grid,.link-row { grid-template-columns: 1fr !important; }
   .section,.hero-panel,.profile-rail,.terminal-hero,.phone-hero,.report-cover,.magazine-cover,.editorial-hero,.hero-slide { padding: 16px; }
   .profile-rail { position: static; }
   .overview,.contribution,.reports,.skills,.challenge,.reflection,.links { grid-column: auto; }

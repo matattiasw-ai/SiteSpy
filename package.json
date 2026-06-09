@@ -8,7 +8,7 @@
     "android": "expo start --android",
     "web": "expo start --web",
     "check": "node scripts/project-check.js",
-    "doctor": "expo-doctor",
+    "doctor": "npx expo-doctor",
     "build": "expo export --platform web",
     "export:android": "expo export --platform android",
     "build:apk": "eas build -p android --profile preview"
@@ -38,7 +38,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "babel-preset-expo": "~54.0.11"
+    "babel-preset-expo": "~54.0.11",
+    "playwright": "^1.60.0"
   },
   "engines": {
     "node": ">=20.19.4"
