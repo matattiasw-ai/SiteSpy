@@ -63,3 +63,6 @@ android/
 dist/
 project-management/
 project-management/SITESPY_STAGGERED_COMMITS_PLAN.md
+portfolio-batch/deployment-config.local.json
+portfolio-batch/logs/deployment-run-*.md
+portfolio-batch/logs/deployment-run-*.json
