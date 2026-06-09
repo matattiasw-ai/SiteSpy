@@ -9,29 +9,21 @@
 
 ## Contribution Area
 
-Integration review, package scripts, and final coordination docs
+My contribution focused on final integration, build readiness, portfolio coordination, and keeping the project aligned for delivery.
 
-## SiteSpy Project Context
+## Project Context
 
 SiteSpy is a construction support app that keeps project records, helps with wall measurements and material estimation, and prepares information for later review.
 
-## Work I Should Be Able To Explain
+## Challenge and Solution
 
-- The purpose of my assigned area.
-- The files, screens, or documentation connected to my area.
-- How the portfolio was deployed.
-- How evidence screenshots prove the work.
-- How GitHub supports a team workflow.
+The main challenge was coordinating many moving parts into a coherent final package. The solution was a presentation-deck style report.
 
-## Current Evidence Status
+## Learning Reflection
 
-Evidence screenshots must be captured manually and added only when they are real and student-specific. Missing evidence is not displayed as a public card.
+I strengthened my understanding of release preparation, Git history, team coordination, and technical handover.
 
-## Next Steps
+## Repository Links
 
-- Capture the screenshots listed in the central checklist.
-- Add them to the local portfolio folder.
-- Create an evidence branch.
-- Commit the evidence files.
-- Open a pull request if required.
-- Confirm the GitHub Pages deployment succeeds.
+- Repository: https://github.com/matattiasw-ai/WashingtonMatattiasPortfolio
+- Live portfolio: https://matattiasw-ai.github.io/WashingtonMatattiasPortfolio/

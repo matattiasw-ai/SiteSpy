@@ -9,29 +9,21 @@
 
 ## Contribution Area
 
-Deployment documentation and EAS readiness
+My contribution focused on deployment notes, release readiness, and the steps that help a project become presentable online.
 
-## SiteSpy Project Context
+## Project Context
 
 SiteSpy is a construction support app that keeps project records, helps with wall measurements and material estimation, and prepares information for later review.
 
-## Work I Should Be Able To Explain
+## Challenge and Solution
 
-- The purpose of my assigned area.
-- The files, screens, or documentation connected to my area.
-- How the portfolio was deployed.
-- How evidence screenshots prove the work.
-- How GitHub supports a team workflow.
+The main challenge was making deployment work visible without turning the page into a command list. The solution was a compact code-themed report.
 
-## Current Evidence Status
+## Learning Reflection
 
-Evidence screenshots must be captured manually and added only when they are real and student-specific. Missing evidence is not displayed as a public card.
+I learned how deployment settings, clear scripts, and GitHub workflows support project delivery.
 
-## Next Steps
+## Repository Links
 
-- Capture the screenshots listed in the central checklist.
-- Add them to the local portfolio folder.
-- Create an evidence branch.
-- Commit the evidence files.
-- Open a pull request if required.
-- Confirm the GitHub Pages deployment succeeds.
+- Repository: https://github.com/Linus45-blid/ShikongoLinusTKPortfolio
+- Live portfolio: https://Linus45-blid.github.io/ShikongoLinusTKPortfolio/

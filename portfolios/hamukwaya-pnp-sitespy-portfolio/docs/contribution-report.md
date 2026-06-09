@@ -9,29 +9,21 @@
 
 ## Contribution Area
 
-Authentication and user profile rules
+My contribution focused on sign-in, user profile flow, and the importance of controlled access in a team project tool.
 
-## SiteSpy Project Context
+## Project Context
 
 SiteSpy is a construction support app that keeps project records, helps with wall measurements and material estimation, and prepares information for later review.
 
-## Work I Should Be Able To Explain
+## Challenge and Solution
 
-- The purpose of my assigned area.
-- The files, screens, or documentation connected to my area.
-- How the portfolio was deployed.
-- How evidence screenshots prove the work.
-- How GitHub supports a team workflow.
+The main challenge was presenting security-related work without exposing sensitive implementation details. The solution was a restrained access-control theme.
 
-## Current Evidence Status
+## Learning Reflection
 
-Evidence screenshots must be captured manually and added only when they are real and student-specific. Missing evidence is not displayed as a public card.
+I gained a stronger understanding of responsible user workflows, account boundaries, and secure team collaboration.
 
-## Next Steps
+## Repository Links
 
-- Capture the screenshots listed in the central checklist.
-- Add them to the local portfolio folder.
-- Create an evidence branch.
-- Commit the evidence files.
-- Open a pull request if required.
-- Confirm the GitHub Pages deployment succeeds.
+- Repository: https://github.com/ramuntu/HamukwayaNPPetrusPortfolio
+- Live portfolio: https://ramuntu.github.io/HamukwayaNPPetrusPortfolio/

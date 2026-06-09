@@ -9,29 +9,21 @@
 
 ## Contribution Area
 
-Validation and loading/error feedback
+My contribution focused on form feedback, validation states, loading states, and the quality of the app experience during everyday use.
 
-## SiteSpy Project Context
+## Project Context
 
 SiteSpy is a construction support app that keeps project records, helps with wall measurements and material estimation, and prepares information for later review.
 
-## Work I Should Be Able To Explain
+## Challenge and Solution
 
-- The purpose of my assigned area.
-- The files, screens, or documentation connected to my area.
-- How the portfolio was deployed.
-- How evidence screenshots prove the work.
-- How GitHub supports a team workflow.
+The main challenge was describing interface quality as practical project work. The solution was a polished product-quality layout with concise examples.
 
-## Current Evidence Status
+## Learning Reflection
 
-Evidence screenshots must be captured manually and added only when they are real and student-specific. Missing evidence is not displayed as a public card.
+I learned how small interface details can make a technical app feel clearer, more reliable, and easier to trust.
 
-## Next Steps
+## Repository Links
 
-- Capture the screenshots listed in the central checklist.
-- Add them to the local portfolio folder.
-- Create an evidence branch.
-- Commit the evidence files.
-- Open a pull request if required.
-- Confirm the GitHub Pages deployment succeeds.
+- Repository: https://github.com/marthandilimengungo-dotcom/MarthaHeitaPortfolio
+- Live portfolio: https://marthandilimengungo-dotcom.github.io/MarthaHeitaPortfolio/

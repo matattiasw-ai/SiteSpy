@@ -9,29 +9,21 @@
 
 ## Contribution Area
 
-Project CRUD service and create/edit screens
+My contribution focused on create, edit, and project service workflows that keep SiteSpy useful for repeated project work.
 
-## SiteSpy Project Context
+## Project Context
 
 SiteSpy is a construction support app that keeps project records, helps with wall measurements and material estimation, and prepares information for later review.
 
-## Work I Should Be Able To Explain
+## Challenge and Solution
 
-- The purpose of my assigned area.
-- The files, screens, or documentation connected to my area.
-- How the portfolio was deployed.
-- How evidence screenshots prove the work.
-- How GitHub supports a team workflow.
+The main challenge was presenting service workflow as a user-facing outcome. The solution was a modern SaaS-style case study.
 
-## Current Evidence Status
+## Learning Reflection
 
-Evidence screenshots must be captured manually and added only when they are real and student-specific. Missing evidence is not displayed as a public card.
+I learned how service flow, form structure, and reliable saves support a professional mobile tool.
 
-## Next Steps
+## Repository Links
 
-- Capture the screenshots listed in the central checklist.
-- Add them to the local portfolio folder.
-- Create an evidence branch.
-- Commit the evidence files.
-- Open a pull request if required.
-- Confirm the GitHub Pages deployment succeeds.
+- Repository: https://github.com/kambowe/KlaudiaKambowePortfolio
+- Live portfolio: https://kambowe.github.io/KlaudiaKambowePortfolio/

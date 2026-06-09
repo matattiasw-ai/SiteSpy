@@ -9,29 +9,21 @@
 
 ## Contribution Area
 
-Firestore data model documentation and indexes
+My contribution focused on documenting how project records are organised and how reliable data structure supports the SiteSpy workflow.
 
-## SiteSpy Project Context
+## Project Context
 
 SiteSpy is a construction support app that keeps project records, helps with wall measurements and material estimation, and prepares information for later review.
 
-## Work I Should Be Able To Explain
+## Challenge and Solution
 
-- The purpose of my assigned area.
-- The files, screens, or documentation connected to my area.
-- How the portfolio was deployed.
-- How evidence screenshots prove the work.
-- How GitHub supports a team workflow.
+The main challenge was turning data structure notes into a readable showcase. The solution was a documentation-first layout with clear sections.
 
-## Current Evidence Status
+## Learning Reflection
 
-Evidence screenshots must be captured manually and added only when they are real and student-specific. Missing evidence is not displayed as a public card.
+I learned how data decisions affect user experience, collaboration, and long-term project maintainability.
 
-## Next Steps
+## Repository Links
 
-- Capture the screenshots listed in the central checklist.
-- Add them to the local portfolio folder.
-- Create an evidence branch.
-- Commit the evidence files.
-- Open a pull request if required.
-- Confirm the GitHub Pages deployment succeeds.
+- Repository: https://github.com/karlhamberera/HambereraKarlPMPortfolio
+- Live portfolio: https://karlhamberera.github.io/HambereraKarlPMPortfolio/

@@ -1,6 +1,6 @@
 # Emilly Ndapuka Screenshot Capture Guide
 
-Capture only real screenshots from your own repository, live portfolio, project work, and GitHub workflow. Add files to `site/assets/screenshots/` using clear names.
+Capture only real screenshots from the student's own repository, live portfolio, project work, and GitHub workflow. Add files to `site/assets/screenshots/` using clear names.
 
 ## Required Screenshots
 

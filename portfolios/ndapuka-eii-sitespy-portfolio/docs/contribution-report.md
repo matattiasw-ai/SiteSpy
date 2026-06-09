@@ -9,29 +9,21 @@
 
 ## Contribution Area
 
-Project creation and manual estimate forms
+My contribution focused on project creation, field input structure, and manual estimate forms for construction project records.
 
-## SiteSpy Project Context
+## Project Context
 
 SiteSpy is a construction support app that keeps project records, helps with wall measurements and material estimation, and prepares information for later review.
 
-## Work I Should Be Able To Explain
+## Challenge and Solution
 
-- The purpose of my assigned area.
-- The files, screens, or documentation connected to my area.
-- How the portfolio was deployed.
-- How evidence screenshots prove the work.
-- How GitHub supports a team workflow.
+The main challenge was making forms feel like field work instead of abstract data entry. The solution was a profile-and-process layout.
 
-## Current Evidence Status
+## Learning Reflection
 
-Evidence screenshots must be captured manually and added only when they are real and student-specific. Missing evidence is not displayed as a public card.
+I learned how form structure, validation, and concise labels support efficient project recording.
 
-## Next Steps
+## Repository Links
 
-- Capture the screenshots listed in the central checklist.
-- Add them to the local portfolio folder.
-- Create an evidence branch.
-- Commit the evidence files.
-- Open a pull request if required.
-- Confirm the GitHub Pages deployment succeeds.
+- Repository: https://github.com/emilly20-06/EmillyNdapukaPortfolio
+- Live portfolio: https://emilly20-06.github.io/EmillyNdapukaPortfolio/

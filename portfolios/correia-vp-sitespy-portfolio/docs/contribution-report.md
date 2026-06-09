@@ -9,29 +9,21 @@
 
 ## Contribution Area
 
-BOQ report summary and cost cards
+My contribution focused on reviewing report-ready cost summaries, BOQ-style presentation, and the way project totals are communicated clearly.
 
-## SiteSpy Project Context
+## Project Context
 
 SiteSpy is a construction support app that keeps project records, helps with wall measurements and material estimation, and prepares information for later review.
 
-## Work I Should Be Able To Explain
+## Challenge and Solution
 
-- The purpose of my assigned area.
-- The files, screens, or documentation connected to my area.
-- How the portfolio was deployed.
-- How evidence screenshots prove the work.
-- How GitHub supports a team workflow.
+The main challenge was keeping technical estimate information readable. The solution was to present totals, categories, and project context in a compact reporting layout.
 
-## Current Evidence Status
+## Learning Reflection
 
-Evidence screenshots must be captured manually and added only when they are real and student-specific. Missing evidence is not displayed as a public card.
+I strengthened my understanding of structured project reporting, GitHub Pages deployment, and the link between user-facing summaries and project records.
 
-## Next Steps
+## Repository Links
 
-- Capture the screenshots listed in the central checklist.
-- Add them to the local portfolio folder.
-- Create an evidence branch.
-- Commit the evidence files.
-- Open a pull request if required.
-- Confirm the GitHub Pages deployment succeeds.
+- Repository: https://github.com/Valentina-Correia/ValentinaCorreiaPortfolio
+- Live portfolio: https://Valentina-Correia.github.io/ValentinaCorreiaPortfolio/

@@ -9,29 +9,21 @@
 
 ## Contribution Area
 
-Profile, settings, and reusable buttons
+My contribution focused on profile, settings, and reusable controls that help the app feel consistent across screens.
 
-## SiteSpy Project Context
+## Project Context
 
 SiteSpy is a construction support app that keeps project records, helps with wall measurements and material estimation, and prepares information for later review.
 
-## Work I Should Be Able To Explain
+## Challenge and Solution
 
-- The purpose of my assigned area.
-- The files, screens, or documentation connected to my area.
-- How the portfolio was deployed.
-- How evidence screenshots prove the work.
-- How GitHub supports a team workflow.
+The main challenge was connecting reusable UI work to visible project value. The solution was a product-focused showcase.
 
-## Current Evidence Status
+## Learning Reflection
 
-Evidence screenshots must be captured manually and added only when they are real and student-specific. Missing evidence is not displayed as a public card.
+I learned how consistency, settings, and reusable elements improve a user's confidence in an app.
 
-## Next Steps
+## Repository Links
 
-- Capture the screenshots listed in the central checklist.
-- Add them to the local portfolio folder.
-- Create an evidence branch.
-- Commit the evidence files.
-- Open a pull request if required.
-- Confirm the GitHub Pages deployment succeeds.
+- Repository: https://github.com/amaliamangundu-tech/AmaliaMangunduPortfolio
+- Live portfolio: https://amaliamangundu-tech.github.io/AmaliaMangunduPortfolio/
