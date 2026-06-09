@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[2]
 CONFIG_PATH = ROOT / "portfolio-batch" / "deployment-config.active.json"
 
 FORBIDDEN_TERMS = [
+    "presentation prep",
     "use the guide",
     "prepare answers",
     "evidence to be added",
@@ -21,6 +22,11 @@ FORBIDDEN_TERMS = [
     "manual screenshot",
     "add screenshots",
     "local guide",
+    "sample evidence",
+]
+
+FORBIDDEN_REGEX = [
+    re.compile(r"\bAI\b"),
 ]
 
 
@@ -63,6 +69,10 @@ def main():
             for term in FORBIDDEN_TERMS:
                 if term in content:
                     failures.append((file, term))
+            original = file.read_text(encoding="utf-8", errors="ignore")
+            for pattern in FORBIDDEN_REGEX:
+                if pattern.search(original):
+                    failures.append((file, pattern.pattern))
 
     for file, term in failures:
         print(f"{file}: forbidden public term found: {term}")

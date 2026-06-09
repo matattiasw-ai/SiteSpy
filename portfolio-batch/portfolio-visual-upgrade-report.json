@@ -1,422 +1,574 @@
 {
-  "generatedAt": "2026-06-09T23:01:59.539160",
+  "generatedAt": "2026-06-09T23:28:59.742489",
   "portfoliosProcessed": 17,
+  "distinctLayoutFamilies": 17,
   "skipped": [
     "Penny",
     "Ndaitavela",
     "Nambuli"
   ],
-  "publicInstructionalContentRemoved": true,
-  "pdfFailures": [],
+  "manualScreenshotWorkLocation": "portfolio-batch/STUDENT_SCREENSHOT_CHECKLIST.md",
   "portfolios": [
     {
-      "studentName": "Valentina Correia",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\correia-vp-sitespy-portfolio",
+      "student": "Valentina Correia",
+      "githubUsername": "Valentina-Correia",
       "repo": "Valentina-Correia/ValentinaCorreiaPortfolio",
       "liveUrl": "https://Valentina-Correia.github.io/ValentinaCorreiaPortfolio/",
-      "pattern": "data-analytics",
-      "theme": "Data Analytics",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Data Cards + Chart",
+      "layoutId": "data-chart-cards",
+      "themeColors": {
+        "background": "#f5f8ff",
+        "surface": "#ffffff",
+        "ink": "#152033",
+        "accent": "#2563eb",
+        "accent2": "#14b8a6"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Haipumbu Beatha NP",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\haipumbu-bnp-sitespy-portfolio",
+      "student": "Haipumbu Beatha NP",
+      "githubUsername": "beathapawana-dot",
       "repo": "beathapawana-dot/HaipumbuBeathaNPPortfolio",
       "liveUrl": "https://beathapawana-dot.github.io/HaipumbuBeathaNPPortfolio/",
-      "pattern": "engineering-blueprint",
-      "theme": "Engineering Blueprint",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Engineering Blueprint",
+      "layoutId": "engineering-blueprint",
+      "themeColors": {
+        "background": "#edf6ff",
+        "surface": "#ffffff",
+        "ink": "#102236",
+        "accent": "#0369a1",
+        "accent2": "#ca8a04"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Hamberera Karl PM",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\hamberera-mkp-sitespy-portfolio",
+      "student": "Hamberera Karl PM",
+      "githubUsername": "karlhamberera",
       "repo": "karlhamberera/HambereraKarlPMPortfolio",
       "liveUrl": "https://karlhamberera.github.io/HambereraKarlPMPortfolio/",
-      "pattern": "clean-documentation",
-      "theme": "Clean Documentation",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Documentation Style",
+      "layoutId": "documentation-style",
+      "themeColors": {
+        "background": "#f8fafc",
+        "surface": "#ffffff",
+        "ink": "#172033",
+        "accent": "#475569",
+        "accent2": "#0f766e"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Hamukwaya NP Petrus",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\hamukwaya-pnp-sitespy-portfolio",
+      "student": "Hamukwaya NP Petrus",
+      "githubUsername": "ramuntu",
       "repo": "ramuntu/HamukwayaNPPetrusPortfolio",
       "liveUrl": "https://ramuntu.github.io/HamukwayaNPPetrusPortfolio/",
-      "pattern": "cybersecurity-dark",
-      "theme": "Cybersecurity Dark",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Cybersecurity Dark Interface",
+      "layoutId": "security-interface",
+      "themeColors": {
+        "background": "#0d1117",
+        "surface": "#171b24",
+        "ink": "#f5f7fb",
+        "accent": "#ef4444",
+        "accent2": "#22c55e"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Martha Heita",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\heita-mn-sitespy-portfolio",
+      "student": "Martha Heita",
+      "githubUsername": "marthandilimengungo-dotcom",
       "repo": "marthandilimengungo-dotcom/MarthaHeitaPortfolio",
       "liveUrl": "https://marthandilimengungo-dotcom.github.io/MarthaHeitaPortfolio/",
-      "pattern": "soft-glass",
-      "theme": "Soft Glass UI",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Soft Glassmorphism",
+      "layoutId": "soft-glass",
+      "themeColors": {
+        "background": "#f8f5ff",
+        "surface": "rgba(255,255,255,.84)",
+        "ink": "#231b34",
+        "accent": "#db2777",
+        "accent2": "#6366f1"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Hilda Iita",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\iita-hn-sitespy-portfolio",
+      "student": "Hilda Iita",
+      "githubUsername": "next-GenCoder",
       "repo": "next-GenCoder/HildaIitaPortfolio",
       "liveUrl": "https://next-GenCoder.github.io/HildaIitaPortfolio/",
-      "pattern": "github-contribution",
-      "theme": "GitHub Contribution",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "GitHub Contribution",
+      "layoutId": "github-contribution",
+      "themeColors": {
+        "background": "#f6fbf7",
+        "surface": "#ffffff",
+        "ink": "#18221b",
+        "accent": "#16a34a",
+        "accent2": "#334155"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Mathias Jonas",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\jonas-mm-sitespy-portfolio",
+      "student": "Mathias Jonas",
+      "githubUsername": "Mathias4040",
       "repo": "Mathias4040/MathiasJonasPortfolio",
       "liveUrl": "https://Mathias4040.github.io/MathiasJonasPortfolio/",
-      "pattern": "dashboard-cards",
-      "theme": "Dashboard Cards",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Dashboard Analytics",
+      "layoutId": "analytics-dashboard",
+      "themeColors": {
+        "background": "#f4f6fb",
+        "surface": "#ffffff",
+        "ink": "#14213d",
+        "accent": "#4f46e5",
+        "accent2": "#0891b2"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Klaudia Kambowe",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\kambowe-kn-sitespy-portfolio",
+      "student": "Klaudia Kambowe",
+      "githubUsername": "kambowe",
       "repo": "kambowe/KlaudiaKambowePortfolio",
       "liveUrl": "https://kambowe.github.io/KlaudiaKambowePortfolio/",
-      "pattern": "modern-saas",
-      "theme": "Modern SaaS",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Modern SaaS Landing",
+      "layoutId": "modern-saas",
+      "themeColors": {
+        "background": "#f5f7fb",
+        "surface": "#ffffff",
+        "ink": "#131c2b",
+        "accent": "#7c3aed",
+        "accent2": "#0ea5e9"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Tunacky Kandere",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\kandere-ndl-sitespy-portfolio",
+      "student": "Tunacky Kandere",
+      "githubUsername": "tunackykandere-lab",
       "repo": "tunackykandere-lab/TunackyKanderePortfolio",
       "liveUrl": "https://tunackykandere-lab.github.io/TunackyKanderePortfolio/",
-      "pattern": "mobile-case",
-      "theme": "Mobile Case Study",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Mobile App Case Study",
+      "layoutId": "mobile-case-study",
+      "themeColors": {
+        "background": "#eef7ff",
+        "surface": "#ffffff",
+        "ink": "#102a43",
+        "accent": "#0284c7",
+        "accent2": "#16a34a"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Johannes M Kandjeke",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\kandjeke-jm-sitespy-portfolio",
+      "student": "Johannes M Kandjeke",
+      "githubUsername": "kandjekejohannes54",
       "repo": "kandjekejohannes54/JohannesMKandjekePortfolio",
       "liveUrl": "https://kandjekejohannes54.github.io/JohannesMKandjekePortfolio/",
-      "pattern": "academic-report",
-      "theme": "Academic Report",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Academic Report",
+      "layoutId": "academic-report",
+      "themeColors": {
+        "background": "#fffaf2",
+        "surface": "#ffffff",
+        "ink": "#2c241c",
+        "accent": "#92400e",
+        "accent2": "#2563eb"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Amalia Mangundu",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\mangundu-a-sitespy-portfolio",
+      "student": "Amalia Mangundu",
+      "githubUsername": "amaliamangundu-tech",
       "repo": "amaliamangundu-tech/AmaliaMangunduPortfolio",
       "liveUrl": "https://amaliamangundu-tech.github.io/AmaliaMangunduPortfolio/",
-      "pattern": "product-landing",
-      "theme": "Product Landing",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Product Landing",
+      "layoutId": "product-landing",
+      "themeColors": {
+        "background": "#f4fbf8",
+        "surface": "#ffffff",
+        "ink": "#10261f",
+        "accent": "#059669",
+        "accent2": "#7c3aed"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Washington Matattias",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\matattias-w-sitespy-portfolio",
+      "student": "Washington Matattias",
+      "githubUsername": "matattiasw-ai",
       "repo": "matattiasw-ai/WashingtonMatattiasPortfolio",
       "liveUrl": "https://matattiasw-ai.github.io/WashingtonMatattiasPortfolio/",
-      "pattern": "presentation-deck",
-      "theme": "Presentation Deck",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Presentation Deck",
+      "layoutId": "presentation-deck",
+      "themeColors": {
+        "background": "#111827",
+        "surface": "#1f2937",
+        "ink": "#f8fafc",
+        "accent": "#facc15",
+        "accent2": "#38bdf8"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Kavakuru Metarere",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\metare-k-sitespy-portfolio",
+      "student": "Kavakuru Metarere",
+      "githubUsername": "Kavakuru-Metarere7",
       "repo": "Kavakuru-Metarere7/KavakuruMetarerePortfolio",
       "liveUrl": "https://Kavakuru-Metarere7.github.io/KavakuruMetarerePortfolio/",
-      "pattern": "split-hero",
-      "theme": "Split Hero",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Split Hero + Timeline",
+      "layoutId": "split-timeline",
+      "themeColors": {
+        "background": "#f5f7fb",
+        "surface": "#ffffff",
+        "ink": "#172033",
+        "accent": "#2563eb",
+        "accent2": "#0f766e"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Emilly Ndapuka",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\ndapuka-eii-sitespy-portfolio",
+      "student": "Emilly Ndapuka",
+      "githubUsername": "emilly20-06",
       "repo": "emilly20-06/EmillyNdapukaPortfolio",
       "liveUrl": "https://emilly20-06.github.io/EmillyNdapukaPortfolio/",
-      "pattern": "sidebar-profile",
-      "theme": "Sidebar Profile",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Sidebar Profile",
+      "layoutId": "sidebar-profile",
+      "themeColors": {
+        "background": "#f8f3eb",
+        "surface": "#fffdf8",
+        "ink": "#241d18",
+        "accent": "#b45309",
+        "accent2": "#0f766e"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Shikongo Linus TK",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\shikongo-ltk-sitespy-portfolio",
+      "student": "Shikongo Linus TK",
+      "githubUsername": "Linus45-blid",
       "repo": "Linus45-blid/ShikongoLinusTKPortfolio",
       "liveUrl": "https://Linus45-blid.github.io/ShikongoLinusTKPortfolio/",
-      "pattern": "terminal-code",
-      "theme": "Terminal Code",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Terminal Console",
+      "layoutId": "terminal-console",
+      "themeColors": {
+        "background": "#080d18",
+        "surface": "#111827",
+        "ink": "#f8fafc",
+        "accent": "#22c55e",
+        "accent2": "#38bdf8"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Hilma Shuumbwa",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\shuumbwa-hmn-sitespy-portfolio",
+      "student": "Hilma Shuumbwa",
+      "githubUsername": "hilma-shuumbwa",
       "repo": "hilma-shuumbwa/HilmaShuumbwaPortfolio",
       "liveUrl": "https://hilma-shuumbwa.github.io/HilmaShuumbwaPortfolio/",
-      "pattern": "minimal-monochrome",
-      "theme": "Minimal Monochrome",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Minimal Editorial",
+      "layoutId": "minimal-editorial",
+      "themeColors": {
+        "background": "#f7f7f7",
+        "surface": "#ffffff",
+        "ink": "#111111",
+        "accent": "#111111",
+        "accent2": "#525252"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     },
     {
-      "studentName": "Tjatindi Michael Kazundire",
-      "portfolioPath": "D:\\Documents\\Jobs\\SiteSpy\\portfolios\\tjatindi-mk-sitespy-portfolio",
+      "student": "Tjatindi Michael Kazundire",
+      "githubUsername": "IcyBeibi68023",
       "repo": "IcyBeibi68023/TjatindiMichaelKazundirePortfolio",
       "liveUrl": "https://IcyBeibi68023.github.io/TjatindiMichaelKazundirePortfolio/",
-      "pattern": "portfolio-magazine",
-      "theme": "Portfolio Magazine",
-      "publicScreenshotsShown": 0,
-      "evidenceSectionHidden": true,
-      "pdfStatus": "created",
-      "filesChanged": [
+      "layoutFamily": "Magazine Profile Feature",
+      "layoutId": "magazine-feature",
+      "themeColors": {
+        "background": "#fff7ed",
+        "surface": "#ffffff",
+        "ink": "#261b12",
+        "accent": "#ea580c",
+        "accent2": "#0f766e"
+      },
+      "certificatesFound": 0,
+      "certificatesDisplayed": false,
+      "evidenceFound": 0,
+      "evidenceDisplayed": false,
+      "reportsLinked": [
+        "presentation-guide.pdf",
+        "contribution-report.pdf"
+      ],
+      "filesUpdated": [
         "site/index.html",
         "site/styles.css",
         "site/script.js",
         "site/evidence.json",
-        "docs/presentation-guide.md",
-        "docs/contribution-report.md",
-        "docs/screenshot-capture-guide.md",
-        "docs/presentation-guide.pdf",
-        "docs/contribution-report.pdf",
+        "site/certificates.json",
         "site/docs/presentation-guide.pdf",
-        "site/docs/contribution-report.pdf"
+        "site/docs/contribution-report.pdf",
+        "site/assets/certificates/"
       ]
     }
-  ],
-  "manualScreenshotWorkLocation": "portfolio-batch/STUDENT_SCREENSHOT_CHECKLIST.md"
+  ]
 }
