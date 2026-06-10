@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-06-10T00:03:46.862614",
+  "generatedAt": "2026-06-10T10:07:40.934888",
   "portfoliosRendered": 17,
   "desktopScreenshots": 17,
+  "tabletScreenshots": 17,
   "mobileScreenshots": 17,
   "distinctLayoutFamilies": 17,
   "layoutCounts": {
@@ -10,24 +11,25 @@
     "documentation-style": 1,
     "security-interface": 1,
     "soft-glass": 1,
-    "github-contribution": 1,
+    "light-premium": 1,
     "analytics-dashboard": 1,
-    "modern-saas": 1,
+    "product-landing": 1,
     "mobile-case-study": 1,
     "academic-report": 1,
-    "product-landing": 1,
-    "presentation-deck": 1,
+    "clean-product": 1,
+    "github-contribution": 1,
     "split-timeline": 1,
     "sidebar-profile": 1,
     "terminal-console": 1,
     "minimal-editorial": 1,
-    "magazine-feature": 1
+    "modern-saas": 1
   },
   "results": [
     {
       "studentName": "Valentina Correia",
       "layout": "data-chart-cards",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\valentina-correia\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\valentina-correia\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\valentina-correia\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
@@ -38,6 +40,7 @@
       "studentName": "Haipumbu Beatha NP",
       "layout": "engineering-blueprint",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\haipumbu-beatha-np\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\haipumbu-beatha-np\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\haipumbu-beatha-np\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
@@ -48,6 +51,7 @@
       "studentName": "Hamberera Karl PM",
       "layout": "documentation-style",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\hamberera-karl-pm\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\hamberera-karl-pm\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\hamberera-karl-pm\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
@@ -58,6 +62,7 @@
       "studentName": "Hamukwaya NP Petrus",
       "layout": "security-interface",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\hamukwaya-np-petrus\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\hamukwaya-np-petrus\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\hamukwaya-np-petrus\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
@@ -68,6 +73,7 @@
       "studentName": "Martha Heita",
       "layout": "soft-glass",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\martha-heita\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\martha-heita\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\martha-heita\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
@@ -76,18 +82,20 @@
     },
     {
       "studentName": "Hilda Iita",
-      "layout": "github-contribution",
+      "layout": "light-premium",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\hilda-iita\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\hilda-iita\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\hilda-iita\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
       "issues": [],
-      "textLength": 1537
+      "textLength": 1558
     },
     {
       "studentName": "Mathias Jonas",
       "layout": "analytics-dashboard",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\mathias-jonas\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\mathias-jonas\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\mathias-jonas\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
@@ -96,18 +104,20 @@
     },
     {
       "studentName": "Klaudia Kambowe",
-      "layout": "modern-saas",
+      "layout": "product-landing",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\klaudia-kambowe\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\klaudia-kambowe\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\klaudia-kambowe\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
       "issues": [],
-      "textLength": 1548
+      "textLength": 1545
     },
     {
       "studentName": "Tunacky Kandere",
       "layout": "mobile-case-study",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\tunacky-kandere\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\tunacky-kandere\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\tunacky-kandere\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
@@ -118,6 +128,7 @@
       "studentName": "Johannes M Kandjeke",
       "layout": "academic-report",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\johannes-m-kandjeke\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\johannes-m-kandjeke\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\johannes-m-kandjeke\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
@@ -126,28 +137,31 @@
     },
     {
       "studentName": "Amalia Mangundu",
-      "layout": "product-landing",
+      "layout": "clean-product",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\amalia-mangundu\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\amalia-mangundu\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\amalia-mangundu\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
       "issues": [],
-      "textLength": 1572
+      "textLength": 1598
     },
     {
       "studentName": "Washington Matattias",
-      "layout": "presentation-deck",
+      "layout": "github-contribution",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\washington-matattias\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\washington-matattias\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\washington-matattias\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
       "issues": [],
-      "textLength": 1446
+      "textLength": 1670
     },
     {
       "studentName": "Kavakuru Metarere",
       "layout": "split-timeline",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\kavakuru-metarere\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\kavakuru-metarere\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\kavakuru-metarere\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
@@ -158,6 +172,7 @@
       "studentName": "Emilly Ndapuka",
       "layout": "sidebar-profile",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\emilly-ndapuka\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\emilly-ndapuka\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\emilly-ndapuka\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
@@ -168,6 +183,7 @@
       "studentName": "Shikongo Linus TK",
       "layout": "terminal-console",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\shikongo-linus-tk\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\shikongo-linus-tk\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\shikongo-linus-tk\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
@@ -178,6 +194,7 @@
       "studentName": "Hilma Shuumbwa",
       "layout": "minimal-editorial",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\hilma-shuumbwa\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\hilma-shuumbwa\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\hilma-shuumbwa\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
@@ -186,13 +203,14 @@
     },
     {
       "studentName": "Tjatindi Michael Kazundire",
-      "layout": "magazine-feature",
+      "layout": "modern-saas",
       "desktopScreenshot": "portfolio-batch\\visual-qa\\tjatindi-michael-kazundire\\desktop.png",
+      "tabletScreenshot": "portfolio-batch\\visual-qa\\tjatindi-michael-kazundire\\tablet.png",
       "mobileScreenshot": "portfolio-batch\\visual-qa\\tjatindi-michael-kazundire\\mobile.png",
       "certificatesDisplayed": false,
       "evidenceDisplayed": false,
       "issues": [],
-      "textLength": 1539
+      "textLength": 1630
     }
   ],
   "failures": []

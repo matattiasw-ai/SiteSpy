@@ -30,6 +30,19 @@ FORBIDDEN_TERMS = [
     "local guide",
 ]
 
+REQUIRED_SECTION_TEXT = [
+    "Project Overview",
+    "My Contribution",
+    "Skills and Tools",
+    "Challenge and Solution",
+    "Learning Reflection",
+]
+
+EXPECTED_SPECIAL_LAYOUTS = {
+    "Washington Matattias": "github-contribution",
+    "Tjatindi Michael Kazundire": "modern-saas",
+}
+
 
 class PageParser(HTMLParser):
     def __init__(self):
@@ -141,6 +154,7 @@ def main():
         html_path = site / "index.html"
         css_path = site / "styles.css"
         desktop = VISUAL_QA_DIR / slug / "desktop.png"
+        tablet = VISUAL_QA_DIR / slug / "tablet.png"
         mobile = VISUAL_QA_DIR / slug / "mobile.png"
         issues = []
 
@@ -162,10 +176,16 @@ def main():
 
         if not parser.layout:
             issues.append("missing data-layout")
+        expected_layout = EXPECTED_SPECIAL_LAYOUTS.get(student)
+        if expected_layout and parser.layout != expected_layout:
+            issues.append(f"expected redesigned layout {expected_layout}, found {parser.layout}")
         if parser.tags["header"] == 0:
             issues.append("missing header")
         if parser.tags["footer"] == 0:
             issues.append("missing footer")
+        for required in REQUIRED_SECTION_TEXT:
+            if required.lower() not in lowered:
+                issues.append(f"missing required section: {required}")
         if "@media" not in css or "760px" not in css:
             issues.append("missing mobile media query near 760px")
         if len(re.findall(r"min-height\s*:\s*(2[2-9][1-9]|[3-9]\d\d)px", css)) > 3:
@@ -194,7 +214,7 @@ def main():
             if not image_path.exists():
                 issues.append(f"broken image reference: {image}")
 
-        for screenshot_path, expected in [(desktop, (1440, 1000)), (mobile, (390, 900))]:
+        for screenshot_path, expected in [(desktop, (1440, 1000)), (tablet, (768, 1000)), (mobile, (390, 900))]:
             if not screenshot_path.exists():
                 issues.append(f"missing screenshot: {screenshot_path.name}")
             else:
@@ -213,6 +233,7 @@ def main():
             "studentName": student,
             "layout": parser.layout,
             "desktopScreenshot": str(desktop.relative_to(ROOT)) if desktop.exists() else "",
+            "tabletScreenshot": str(tablet.relative_to(ROOT)) if tablet.exists() else "",
             "mobileScreenshot": str(mobile.relative_to(ROOT)) if mobile.exists() else "",
             "certificatesDisplayed": bool(cert_files),
             "evidenceDisplayed": bool(screenshot_files),
@@ -231,9 +252,12 @@ def main():
         failures.append(f"Expected at least 14 distinct visual composition patterns, found {distinct_layouts}")
 
     desktop_count = sum(1 for item in items if (VISUAL_QA_DIR / slugify(item["studentName"]) / "desktop.png").exists())
+    tablet_count = sum(1 for item in items if (VISUAL_QA_DIR / slugify(item["studentName"]) / "tablet.png").exists())
     mobile_count = sum(1 for item in items if (VISUAL_QA_DIR / slugify(item["studentName"]) / "mobile.png").exists())
     if desktop_count != 17:
         failures.append(f"Expected 17 desktop screenshots, found {desktop_count}")
+    if tablet_count != 17:
+        failures.append(f"Expected 17 tablet screenshots, found {tablet_count}")
     if mobile_count != 17:
         failures.append(f"Expected 17 mobile screenshots, found {mobile_count}")
 
@@ -241,6 +265,7 @@ def main():
         "generatedAt": __import__("datetime").datetime.now().isoformat(),
         "portfoliosRendered": len(items),
         "desktopScreenshots": desktop_count,
+        "tabletScreenshots": tablet_count,
         "mobileScreenshots": mobile_count,
         "distinctLayoutFamilies": distinct_layouts,
         "layoutCounts": dict(layout_counts),
@@ -254,6 +279,7 @@ def main():
         "",
         f"- Portfolios rendered locally: {len(items)}",
         f"- Desktop screenshots captured: {desktop_count}",
+        f"- Tablet screenshots captured: {tablet_count}",
         f"- Mobile screenshots captured: {mobile_count}",
         f"- Distinct visual composition patterns: {distinct_layouts}",
         f"- Failures: {len(failures)}",
@@ -276,6 +302,7 @@ def main():
     print("Visual QA score passed.")
     print(f"Portfolios rendered locally: {len(items)}")
     print(f"Desktop screenshots captured: {desktop_count}")
+    print(f"Tablet screenshots captured: {tablet_count}")
     print(f"Mobile screenshots captured: {mobile_count}")
     print(f"Distinct visual composition patterns: {distinct_layouts}")
     return 0

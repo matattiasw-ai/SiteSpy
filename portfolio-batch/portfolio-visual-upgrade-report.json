@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-10T00:02:18.691563",
+  "generatedAt": "2026-06-10T10:06:57.276705",
   "portfoliosProcessed": 17,
   "distinctLayoutFamilies": 17,
   "skipped": [
@@ -179,14 +179,14 @@
       "githubUsername": "next-GenCoder",
       "repo": "next-GenCoder/HildaIitaPortfolio",
       "liveUrl": "https://next-GenCoder.github.io/HildaIitaPortfolio/",
-      "layoutFamily": "GitHub Contribution",
-      "layoutId": "github-contribution",
+      "layoutFamily": "Light Premium Portfolio",
+      "layoutId": "light-premium",
       "themeColors": {
-        "background": "#f6fbf7",
+        "background": "#f7f9fc",
         "surface": "#ffffff",
-        "ink": "#18221b",
-        "accent": "#16a34a",
-        "accent2": "#334155"
+        "ink": "#182033",
+        "accent": "#0f766e",
+        "accent2": "#b45309"
       },
       "certificatesFound": 0,
       "certificatesDisplayed": false,
@@ -245,14 +245,14 @@
       "githubUsername": "kambowe",
       "repo": "kambowe/KlaudiaKambowePortfolio",
       "liveUrl": "https://kambowe.github.io/KlaudiaKambowePortfolio/",
-      "layoutFamily": "Modern SaaS Landing",
-      "layoutId": "modern-saas",
+      "layoutFamily": "Product Landing",
+      "layoutId": "product-landing",
       "themeColors": {
-        "background": "#f5f7fb",
+        "background": "#f4fbf8",
         "surface": "#ffffff",
-        "ink": "#131c2b",
-        "accent": "#7c3aed",
-        "accent2": "#0ea5e9"
+        "ink": "#10261f",
+        "accent": "#059669",
+        "accent2": "#7c3aed"
       },
       "certificatesFound": 0,
       "certificatesDisplayed": false,
@@ -344,14 +344,14 @@
       "githubUsername": "amaliamangundu-tech",
       "repo": "amaliamangundu-tech/AmaliaMangunduPortfolio",
       "liveUrl": "https://amaliamangundu-tech.github.io/AmaliaMangunduPortfolio/",
-      "layoutFamily": "Product Landing",
-      "layoutId": "product-landing",
+      "layoutFamily": "Clean Product Portfolio",
+      "layoutId": "clean-product",
       "themeColors": {
-        "background": "#f4fbf8",
+        "background": "#f3f7f4",
         "surface": "#ffffff",
-        "ink": "#10261f",
-        "accent": "#059669",
-        "accent2": "#7c3aed"
+        "ink": "#15231b",
+        "accent": "#15803d",
+        "accent2": "#1d4ed8"
       },
       "certificatesFound": 0,
       "certificatesDisplayed": false,
@@ -377,14 +377,14 @@
       "githubUsername": "matattiasw-ai",
       "repo": "matattiasw-ai/WashingtonMatattiasPortfolio",
       "liveUrl": "https://matattiasw-ai.github.io/WashingtonMatattiasPortfolio/",
-      "layoutFamily": "Presentation Deck",
-      "layoutId": "presentation-deck",
+      "layoutFamily": "GitHub Contribution",
+      "layoutId": "github-contribution",
       "themeColors": {
-        "background": "#111827",
-        "surface": "#1f2937",
-        "ink": "#f8fafc",
-        "accent": "#facc15",
-        "accent2": "#38bdf8"
+        "background": "#f6fbf7",
+        "surface": "#ffffff",
+        "ink": "#18221b",
+        "accent": "#16a34a",
+        "accent2": "#334155"
       },
       "certificatesFound": 0,
       "certificatesDisplayed": false,
@@ -542,14 +542,14 @@
       "githubUsername": "IcyBeibi68023",
       "repo": "IcyBeibi68023/TjatindiMichaelKazundirePortfolio",
       "liveUrl": "https://IcyBeibi68023.github.io/TjatindiMichaelKazundirePortfolio/",
-      "layoutFamily": "Magazine Profile Feature",
-      "layoutId": "magazine-feature",
+      "layoutFamily": "Modern SaaS Landing",
+      "layoutId": "modern-saas",
       "themeColors": {
-        "background": "#fff7ed",
+        "background": "#f5f7fb",
         "surface": "#ffffff",
-        "ink": "#261b12",
-        "accent": "#ea580c",
-        "accent2": "#0f766e"
+        "ink": "#131c2b",
+        "accent": "#7c3aed",
+        "accent2": "#0ea5e9"
       },
       "certificatesFound": 0,
       "certificatesDisplayed": false,

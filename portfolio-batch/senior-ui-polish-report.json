@@ -1,0 +1,147 @@
+{
+  "portfoliosProcessed": 17,
+  "distinctLayoutFamilies": 17,
+  "referencePortfolio": "D:/Documents/Jobs/Morning/Programming/FletPortfolio",
+  "specialAttention": {
+    "Washington Matattias": "Redesigned as GitHub contribution profile",
+    "Tjatindi Michael Kazundire": "Redesigned as modern SaaS product portfolio"
+  },
+  "rows": [
+    {
+      "studentName": "Valentina Correia",
+      "githubUsername": "Valentina-Correia",
+      "repoName": "ValentinaCorreiaPortfolio",
+      "layoutFamily": "data-chart-cards",
+      "role": "Reporting and cost summary reviewer",
+      "sitePath": "portfolios\\correia-vp-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Haipumbu Beatha NP",
+      "githubUsername": "beathapawana-dot",
+      "repoName": "HaipumbuBeathaNPPortfolio",
+      "layoutFamily": "engineering-blueprint",
+      "role": "Estimation workflow reviewer",
+      "sitePath": "portfolios\\haipumbu-bnp-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Hamberera Karl PM",
+      "githubUsername": "karlhamberera",
+      "repoName": "HambereraKarlPMPortfolio",
+      "layoutFamily": "documentation-style",
+      "role": "Data model documentation reviewer",
+      "sitePath": "portfolios\\hamberera-mkp-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Hamukwaya NP Petrus",
+      "githubUsername": "ramuntu",
+      "repoName": "HamukwayaNPPetrusPortfolio",
+      "layoutFamily": "security-interface",
+      "role": "Access and profile workflow reviewer",
+      "sitePath": "portfolios\\hamukwaya-pnp-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Martha Heita",
+      "githubUsername": "marthandilimengungo-dotcom",
+      "repoName": "MarthaHeitaPortfolio",
+      "layoutFamily": "soft-glass",
+      "role": "Interface quality reviewer",
+      "sitePath": "portfolios\\heita-mn-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Hilda Iita",
+      "githubUsername": "next-GenCoder",
+      "repoName": "HildaIitaPortfolio",
+      "layoutFamily": "light-premium",
+      "role": "Quality and workflow reviewer",
+      "sitePath": "portfolios\\iita-hn-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Mathias Jonas",
+      "githubUsername": "Mathias4040",
+      "repoName": "MathiasJonasPortfolio",
+      "layoutFamily": "analytics-dashboard",
+      "role": "Project history workflow reviewer",
+      "sitePath": "portfolios\\jonas-mm-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Klaudia Kambowe",
+      "githubUsername": "kambowe",
+      "repoName": "KlaudiaKambowePortfolio",
+      "layoutFamily": "product-landing",
+      "role": "Project service workflow reviewer",
+      "sitePath": "portfolios\\kambowe-kn-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Tunacky Kandere",
+      "githubUsername": "tunackykandere-lab",
+      "repoName": "TunackyKanderePortfolio",
+      "layoutFamily": "mobile-case-study",
+      "role": "Mobile navigation and dashboard reviewer",
+      "sitePath": "portfolios\\kandere-ndl-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Johannes M Kandjeke",
+      "githubUsername": "kandjekejohannes54",
+      "repoName": "JohannesMKandjekePortfolio",
+      "layoutFamily": "academic-report",
+      "role": "Responsive documentation reviewer",
+      "sitePath": "portfolios\\kandjeke-jm-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Amalia Mangundu",
+      "githubUsername": "amaliamangundu-tech",
+      "repoName": "AmaliaMangunduPortfolio",
+      "layoutFamily": "clean-product",
+      "role": "Settings and reusable controls reviewer",
+      "sitePath": "portfolios\\mangundu-a-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Washington Matattias",
+      "githubUsername": "matattiasw-ai",
+      "repoName": "WashingtonMatattiasPortfolio",
+      "layoutFamily": "github-contribution",
+      "role": "Release coordination and integration reviewer",
+      "sitePath": "portfolios\\matattias-w-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Kavakuru Metarere",
+      "githubUsername": "Kavakuru-Metarere7",
+      "repoName": "KavakuruMetarerePortfolio",
+      "layoutFamily": "split-timeline",
+      "role": "Authentication screen reviewer",
+      "sitePath": "portfolios\\metare-k-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Emilly Ndapuka",
+      "githubUsername": "emilly20-06",
+      "repoName": "EmillyNdapukaPortfolio",
+      "layoutFamily": "sidebar-profile",
+      "role": "Field form and estimate reviewer",
+      "sitePath": "portfolios\\ndapuka-eii-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Shikongo Linus TK",
+      "githubUsername": "Linus45-blid",
+      "repoName": "ShikongoLinusTKPortfolio",
+      "layoutFamily": "terminal-console",
+      "role": "Deployment readiness reviewer",
+      "sitePath": "portfolios\\shikongo-ltk-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Hilma Shuumbwa",
+      "githubUsername": "hilma-shuumbwa",
+      "repoName": "HilmaShuumbwaPortfolio",
+      "layoutFamily": "minimal-editorial",
+      "role": "Runtime configuration reviewer",
+      "sitePath": "portfolios\\shuumbwa-hmn-sitespy-portfolio\\site"
+    },
+    {
+      "studentName": "Tjatindi Michael Kazundire",
+      "githubUsername": "IcyBeibi68023",
+      "repoName": "TjatindiMichaelKazundirePortfolio",
+      "layoutFamily": "modern-saas",
+      "role": "Security rules and access documentation reviewer",
+      "sitePath": "portfolios\\tjatindi-mk-sitespy-portfolio\\site"
+    }
+  ]
+}

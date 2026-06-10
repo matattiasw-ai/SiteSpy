@@ -220,6 +220,32 @@ LAYOUTS = [
         "icon": "◆",
     },
     {
+        "id": "light-premium",
+        "label": "Light Premium Portfolio",
+        "font": "Inter, Segoe UI, Arial, sans-serif",
+        "bg": "#f7f9fc",
+        "surface": "#ffffff",
+        "ink": "#182033",
+        "muted": "#5f6b7d",
+        "accent": "#0f766e",
+        "accent2": "#b45309",
+        "shape": "10px",
+        "icon": "LP",
+    },
+    {
+        "id": "clean-product",
+        "label": "Clean Product Portfolio",
+        "font": "Aptos, Calibri, Segoe UI, Arial, sans-serif",
+        "bg": "#f3f7f4",
+        "surface": "#ffffff",
+        "ink": "#15231b",
+        "muted": "#5f6c64",
+        "accent": "#15803d",
+        "accent2": "#1d4ed8",
+        "shape": "12px",
+        "icon": "CP",
+    },
+    {
         "id": "presentation-deck",
         "label": "Presentation Deck",
         "font": "Segoe UI, Arial, sans-serif",
@@ -240,18 +266,18 @@ ASSIGNMENTS = {
     "Hamberera Karl PM": ("documentation-style", "Data model documentation reviewer", "documenting how project records are organised and how reliable data structure supports the SiteSpy workflow", "turning data structure notes into a readable public showcase", "using a documentation-first layout with clear review sections", ["Data structure", "Documentation", "Static sites", "GitHub", "Review notes", "Project planning"]),
     "Hamukwaya NP Petrus": ("security-interface", "Access and profile workflow reviewer", "sign-in, user profile flow, and the importance of controlled access in a team project tool", "presenting access-related work without exposing sensitive implementation details", "using a restrained access-control interface that focuses on project value", ["Access control", "Profile flow", "Security review", "GitHub", "Expo context", "Team workflow"]),
     "Martha Heita": ("soft-glass", "Interface quality reviewer", "form feedback, validation states, loading states, and the quality of the app experience during everyday use", "describing interface quality as practical project work", "using polished product-quality sections that connect feedback to user trust", ["UI quality", "Validation", "Loading states", "CSS", "Static portfolio", "Review writing"]),
-    "Hilda Iita": ("github-contribution", "Quality and workflow reviewer", "project checks, workflow review, and documenting how the team keeps the project organised", "linking quality work to visible project value", "using a contribution-log layout that connects checks, records, and delivery", ["Project checks", "GitHub workflow", "Documentation", "Static hosting", "Quality notes", "Team review"]),
+    "Hilda Iita": ("light-premium", "Quality and workflow reviewer", "project checks, workflow review, and documenting how the team keeps the project organised", "linking quality work to visible project value", "using a polished light showcase layout that connects checks, records, and delivery", ["Project checks", "GitHub workflow", "Documentation", "Static hosting", "Quality notes", "Team review"]),
     "Mathias Jonas": ("analytics-dashboard", "Project history workflow reviewer", "how project history and detail views help users return to earlier work and understand saved records", "making workflow history feel concrete", "using a dashboard layout with focused record and progress cards", ["Project history", "Detail views", "Dashboard layout", "HTML", "CSS", "Git"]),
-    "Klaudia Kambowe": ("modern-saas", "Project service workflow reviewer", "create, edit, and project service workflows that keep SiteSpy useful for repeated project work", "presenting service workflow as a user-facing outcome", "using a modern product layout that frames workflow as reliable app value", ["Project services", "CRUD flow", "Forms", "GitHub Pages", "CSS", "Workflow review"]),
+    "Klaudia Kambowe": ("product-landing", "Project service workflow reviewer", "create, edit, and project service workflows that keep SiteSpy useful for repeated project work", "presenting service workflow as a user-facing outcome", "using a product landing layout that frames workflow as reliable app value", ["Project services", "CRUD flow", "Forms", "GitHub Pages", "CSS", "Workflow review"]),
     "Tunacky Kandere": ("mobile-case-study", "Mobile navigation and dashboard reviewer", "the landing experience, splash flow, dashboard structure, and how users move through the app", "capturing mobile flow on a static page", "using a mobile case-study layout with compact device-style sections", ["Mobile layout", "Navigation", "Dashboard", "Expo context", "CSS", "Git workflow"]),
     "Johannes M Kandjeke": ("academic-report", "Responsive documentation reviewer", "responsive layout review, spacing, typography, and documentation that supports final presentation", "making review work easy to assess", "using an academic report format with clear evidence-neutral sections", ["Responsive design", "Typography", "Documentation", "Portfolio review", "HTML", "CSS"]),
-    "Amalia Mangundu": ("product-landing", "Settings and reusable controls reviewer", "profile, settings, and reusable controls that help the app feel consistent across screens", "connecting reusable interface work to visible project value", "using a product landing structure that highlights consistency and app confidence", ["Settings", "Reusable controls", "Profile flow", "Product UI", "Git", "CSS"]),
-    "Washington Matattias": ("presentation-deck", "Release coordination and integration reviewer", "final integration, build readiness, portfolio coordination, and keeping the project aligned for delivery", "coordinating many moving parts into a coherent final package", "using a presentation-deck structure that shows readiness, reports, and project links", ["Release readiness", "Integration", "GitHub", "Portfolio coordination", "Expo", "Firebase context"]),
+    "Amalia Mangundu": ("clean-product", "Settings and reusable controls reviewer", "profile, settings, and reusable controls that help the app feel consistent across screens", "connecting reusable interface work to visible project value", "using a clean product portfolio structure that highlights consistency and app confidence", ["Settings", "Reusable controls", "Profile flow", "Product UI", "Git", "CSS"]),
+    "Washington Matattias": ("github-contribution", "Release coordination and integration reviewer", "final integration, build readiness, portfolio coordination, and keeping the project aligned for delivery", "coordinating many moving parts into a coherent final package", "using a GitHub contribution profile that highlights integration, release readiness, and project links", ["Release readiness", "Integration", "GitHub", "Portfolio coordination", "Expo", "Firebase context"]),
     "Kavakuru Metarere": ("split-timeline", "Authentication screen reviewer", "the authentication screens and the flow between login, registration, and password recovery", "presenting authentication flow without implementation clutter", "using a split timeline layout that keeps entry flow clear and concise", ["Authentication flow", "Login screens", "Register flow", "CSS", "Git", "Static pages"]),
     "Emilly Ndapuka": ("sidebar-profile", "Field form and estimate reviewer", "project creation, field input structure, and manual estimate forms for construction project records", "making forms feel like field work instead of abstract data entry", "using a profile-and-process layout that highlights field recording value", ["Field forms", "Project creation", "Estimate forms", "HTML", "CSS", "GitHub workflow"]),
     "Shikongo Linus TK": ("terminal-console", "Deployment readiness reviewer", "deployment notes, release readiness, and the steps that help a project become presentable online", "making deployment work visible without turning the public page into a command list", "using a compact code-themed report that focuses on delivery outcomes", ["Deployment", "GitHub Actions", "Pages", "Release notes", "Scripts", "Static hosting"]),
     "Hilma Shuumbwa": ("minimal-editorial", "Runtime configuration reviewer", "configuration loading, environment awareness, and the checks that help the app start reliably", "explaining runtime configuration without exposing private values", "using a minimal technical report layout that keeps attention on reliability", ["Runtime config", "Expo", "Firebase context", "Diagnostics", "Git", "Documentation"]),
-    "Tjatindi Michael Kazundire": ("magazine-feature", "Security rules and access documentation reviewer", "security rules, access notes, and how project records can be protected in a Firebase-backed app", "communicating security work clearly", "using an editorial portfolio layout with concise report sections", ["Security rules", "Access review", "Firebase context", "Documentation", "GitHub", "CSS"]),
+    "Tjatindi Michael Kazundire": ("modern-saas", "Security rules and access documentation reviewer", "security rules, access notes, and how project records can be protected in a Firebase-backed app", "communicating security work clearly", "using a modern SaaS product portfolio that frames access work as polished app value", ["Security rules", "Access review", "Firebase context", "Documentation", "GitHub", "CSS"]),
 }
 
 
@@ -572,6 +598,10 @@ def build_css(layout):
         extra = """.hero{grid-template-columns:1fr}.hero-panel{display:grid;grid-template-columns:repeat(4,1fr)}.content-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.overview{grid-column:span 2;grid-row:span 2}.contribution{grid-column:span 2}.skills,.challenge,.reflection,.reports,.links{grid-column:span 2}.section{border:0;box-shadow:0 12px 34px rgba(79,70,229,.12)}.section-title{border-bottom:1px solid color-mix(in srgb,var(--accent) 16%,transparent);padding-bottom:9px}.section-title span{border-radius:6px}"""
     elif layout_id == "modern-saas":
         extra = """.hero{grid-template-columns:1.2fr .8fr;min-height:360px}.hero>div{align-self:center}.hero-panel{border:0;background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 18%,var(--surface)),color-mix(in srgb,var(--accent2) 18%,var(--surface)));transform:rotate(1deg)}.content-grid{display:block}.section{display:grid;grid-template-columns:260px 1fr;gap:18px;align-items:start;margin-bottom:12px;border-left:6px solid var(--accent)}.section-title{margin:0}.reports .document-grid,.links .link-row{grid-column:2}.skills .skill-list{grid-column:2}.section-title span{border-radius:8px}"""
+    elif layout_id == "light-premium":
+        extra = """.hero{grid-template-columns:1.05fr .95fr;align-items:center}.hero>div{background:var(--surface);border:1px solid color-mix(in srgb,var(--accent) 16%,transparent);border-radius:var(--shape);padding:30px;box-shadow:0 18px 48px rgba(15,118,110,.10)}.hero-panel{box-shadow:0 24px 60px rgba(180,83,9,.12);border-top:5px solid var(--accent2)}.content-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.overview,.contribution{grid-column:span 6}.work-area,.skills,.challenge,.reflection{grid-column:span 3}.reports,.links{grid-column:span 6}.section{box-shadow:0 14px 38px rgba(24,32,51,.07)}.section-title span{border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2))}"""
+    elif layout_id == "clean-product":
+        extra = """.hero{grid-template-columns:1fr;max-width:940px}.hero>div{text-align:left;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 10%,var(--surface)),var(--surface));border:1px solid color-mix(in srgb,var(--accent) 16%,transparent);border-radius:var(--shape);padding:30px}.hero-panel{display:flex;flex-wrap:wrap;align-items:center;gap:12px;box-shadow:none}.hero-panel strong{flex-basis:100%}.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.overview,.contribution,.reports,.links{grid-column:span 2}.section{box-shadow:none;border-left:5px solid var(--accent)}.section-title span{border-radius:8px;background:var(--accent)}.skill-list li{background:color-mix(in srgb,var(--accent) 9%,var(--surface))}"""
     elif layout_id == "product-landing":
         extra = """.hero{grid-template-columns:1fr;max-width:900px;margin-left:auto;margin-right:auto;text-align:center}.hero-panel{display:flex;justify-content:center;gap:16px;box-shadow:none}.content-grid{display:block;max-width:980px;margin-left:auto;margin-right:auto}.section{display:grid;grid-template-columns:80px 1fr;gap:18px;border:0;border-bottom:1px solid color-mix(in srgb,var(--accent) 18%,transparent);box-shadow:none;border-radius:0}.section-title{display:block}.section-title span{margin-bottom:8px}.skills .skill-list,.reports .document-grid,.links .link-row{grid-column:2}.overview{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 10%,var(--surface)),var(--surface));border-radius:18px;border-bottom:0}"""
     elif layout_id == "documentation-style":

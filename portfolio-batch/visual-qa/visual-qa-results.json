@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T22:04:17.516Z",
+  "generatedAt": "2026-06-10T08:07:40.671Z",
   "results": [
     {
       "studentName": "Valentina Correia",
@@ -7,6 +7,7 @@
       "repoName": "ValentinaCorreiaPortfolio",
       "slug": "valentina-correia",
       "desktop": "portfolio-batch/visual-qa/valentina-correia/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/valentina-correia/tablet.png",
       "mobile": "portfolio-batch/visual-qa/valentina-correia/mobile.png"
     },
     {
@@ -15,6 +16,7 @@
       "repoName": "HaipumbuBeathaNPPortfolio",
       "slug": "haipumbu-beatha-np",
       "desktop": "portfolio-batch/visual-qa/haipumbu-beatha-np/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/haipumbu-beatha-np/tablet.png",
       "mobile": "portfolio-batch/visual-qa/haipumbu-beatha-np/mobile.png"
     },
     {
@@ -23,6 +25,7 @@
       "repoName": "HambereraKarlPMPortfolio",
       "slug": "hamberera-karl-pm",
       "desktop": "portfolio-batch/visual-qa/hamberera-karl-pm/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/hamberera-karl-pm/tablet.png",
       "mobile": "portfolio-batch/visual-qa/hamberera-karl-pm/mobile.png"
     },
     {
@@ -31,6 +34,7 @@
       "repoName": "HamukwayaNPPetrusPortfolio",
       "slug": "hamukwaya-np-petrus",
       "desktop": "portfolio-batch/visual-qa/hamukwaya-np-petrus/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/hamukwaya-np-petrus/tablet.png",
       "mobile": "portfolio-batch/visual-qa/hamukwaya-np-petrus/mobile.png"
     },
     {
@@ -39,6 +43,7 @@
       "repoName": "MarthaHeitaPortfolio",
       "slug": "martha-heita",
       "desktop": "portfolio-batch/visual-qa/martha-heita/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/martha-heita/tablet.png",
       "mobile": "portfolio-batch/visual-qa/martha-heita/mobile.png"
     },
     {
@@ -47,6 +52,7 @@
       "repoName": "HildaIitaPortfolio",
       "slug": "hilda-iita",
       "desktop": "portfolio-batch/visual-qa/hilda-iita/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/hilda-iita/tablet.png",
       "mobile": "portfolio-batch/visual-qa/hilda-iita/mobile.png"
     },
     {
@@ -55,6 +61,7 @@
       "repoName": "MathiasJonasPortfolio",
       "slug": "mathias-jonas",
       "desktop": "portfolio-batch/visual-qa/mathias-jonas/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/mathias-jonas/tablet.png",
       "mobile": "portfolio-batch/visual-qa/mathias-jonas/mobile.png"
     },
     {
@@ -63,6 +70,7 @@
       "repoName": "KlaudiaKambowePortfolio",
       "slug": "klaudia-kambowe",
       "desktop": "portfolio-batch/visual-qa/klaudia-kambowe/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/klaudia-kambowe/tablet.png",
       "mobile": "portfolio-batch/visual-qa/klaudia-kambowe/mobile.png"
     },
     {
@@ -71,6 +79,7 @@
       "repoName": "TunackyKanderePortfolio",
       "slug": "tunacky-kandere",
       "desktop": "portfolio-batch/visual-qa/tunacky-kandere/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/tunacky-kandere/tablet.png",
       "mobile": "portfolio-batch/visual-qa/tunacky-kandere/mobile.png"
     },
     {
@@ -79,6 +88,7 @@
       "repoName": "JohannesMKandjekePortfolio",
       "slug": "johannes-m-kandjeke",
       "desktop": "portfolio-batch/visual-qa/johannes-m-kandjeke/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/johannes-m-kandjeke/tablet.png",
       "mobile": "portfolio-batch/visual-qa/johannes-m-kandjeke/mobile.png"
     },
     {
@@ -87,6 +97,7 @@
       "repoName": "AmaliaMangunduPortfolio",
       "slug": "amalia-mangundu",
       "desktop": "portfolio-batch/visual-qa/amalia-mangundu/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/amalia-mangundu/tablet.png",
       "mobile": "portfolio-batch/visual-qa/amalia-mangundu/mobile.png"
     },
     {
@@ -95,6 +106,7 @@
       "repoName": "WashingtonMatattiasPortfolio",
       "slug": "washington-matattias",
       "desktop": "portfolio-batch/visual-qa/washington-matattias/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/washington-matattias/tablet.png",
       "mobile": "portfolio-batch/visual-qa/washington-matattias/mobile.png"
     },
     {
@@ -103,6 +115,7 @@
       "repoName": "KavakuruMetarerePortfolio",
       "slug": "kavakuru-metarere",
       "desktop": "portfolio-batch/visual-qa/kavakuru-metarere/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/kavakuru-metarere/tablet.png",
       "mobile": "portfolio-batch/visual-qa/kavakuru-metarere/mobile.png"
     },
     {
@@ -111,6 +124,7 @@
       "repoName": "EmillyNdapukaPortfolio",
       "slug": "emilly-ndapuka",
       "desktop": "portfolio-batch/visual-qa/emilly-ndapuka/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/emilly-ndapuka/tablet.png",
       "mobile": "portfolio-batch/visual-qa/emilly-ndapuka/mobile.png"
     },
     {
@@ -119,6 +133,7 @@
       "repoName": "ShikongoLinusTKPortfolio",
       "slug": "shikongo-linus-tk",
       "desktop": "portfolio-batch/visual-qa/shikongo-linus-tk/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/shikongo-linus-tk/tablet.png",
       "mobile": "portfolio-batch/visual-qa/shikongo-linus-tk/mobile.png"
     },
     {
@@ -127,6 +142,7 @@
       "repoName": "HilmaShuumbwaPortfolio",
       "slug": "hilma-shuumbwa",
       "desktop": "portfolio-batch/visual-qa/hilma-shuumbwa/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/hilma-shuumbwa/tablet.png",
       "mobile": "portfolio-batch/visual-qa/hilma-shuumbwa/mobile.png"
     },
     {
@@ -135,6 +151,7 @@
       "repoName": "TjatindiMichaelKazundirePortfolio",
       "slug": "tjatindi-michael-kazundire",
       "desktop": "portfolio-batch/visual-qa/tjatindi-michael-kazundire/desktop.png",
+      "tablet": "portfolio-batch/visual-qa/tjatindi-michael-kazundire/tablet.png",
       "mobile": "portfolio-batch/visual-qa/tjatindi-michael-kazundire/mobile.png"
     }
   ]

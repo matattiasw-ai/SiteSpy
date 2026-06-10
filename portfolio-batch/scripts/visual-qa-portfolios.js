@@ -43,6 +43,12 @@ function imageTag(student, slug, file, label) {
   </figure>`;
 }
 
+async function captureViewport(page, url, outDir, file, width, height) {
+  await page.setViewportSize({ width, height });
+  await page.goto(url, { waitUntil: "networkidle" });
+  await page.screenshot({ path: path.join(outDir, file), fullPage: false });
+}
+
 async function main() {
   const items = activeItems();
   fs.mkdirSync(outputRoot, { recursive: true });
@@ -60,12 +66,9 @@ async function main() {
 
       const url = pathToFileURL(siteIndex).href;
       const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
-      await page.goto(url, { waitUntil: "networkidle" });
-      await page.screenshot({ path: path.join(outDir, "desktop.png"), fullPage: false });
-
-      await page.setViewportSize({ width: 390, height: 900 });
-      await page.goto(url, { waitUntil: "networkidle" });
-      await page.screenshot({ path: path.join(outDir, "mobile.png"), fullPage: false });
+      await captureViewport(page, url, outDir, "desktop.png", 1440, 1000);
+      await captureViewport(page, url, outDir, "tablet.png", 768, 1000);
+      await captureViewport(page, url, outDir, "mobile.png", 390, 900);
       await page.close();
 
       results.push({
@@ -74,6 +77,7 @@ async function main() {
         repoName: item.repoName,
         slug,
         desktop: `portfolio-batch/visual-qa/${slug}/desktop.png`,
+        tablet: `portfolio-batch/visual-qa/${slug}/tablet.png`,
         mobile: `portfolio-batch/visual-qa/${slug}/mobile.png`,
       });
 
@@ -97,7 +101,7 @@ async function main() {
     main { padding: 18px; display: grid; gap: 20px; }
     section { background: #1f2937; border: 1px solid #374151; border-radius: 10px; padding: 14px; }
     h2 { margin: 0 0 12px; font-size: 18px; }
-    .shots { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(220px, .55fr); gap: 12px; align-items: start; }
+    .shots { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr) minmax(220px, .55fr); gap: 12px; align-items: start; }
     figure { margin: 0; background: #0f172a; border: 1px solid #334155; border-radius: 8px; overflow: hidden; }
     figcaption { padding: 8px 10px; font-size: 13px; color: #cbd5e1; border-bottom: 1px solid #334155; }
     img { display: block; width: 100%; height: auto; }
@@ -107,7 +111,7 @@ async function main() {
 <body>
   <header>
     <h1>SiteSpy Portfolio Visual QA</h1>
-    <p>${results.length} active portfolios. Desktop viewport: 1440x1000. Mobile viewport: 390x900.</p>
+    <p>${results.length} active portfolios. Desktop viewport: 1440x1000. Tablet viewport: 768x1000. Mobile viewport: 390x900.</p>
   </header>
   <main>
     ${results
@@ -116,6 +120,7 @@ async function main() {
       <h2>${result.studentName} <small>(${result.githubUsername}/${result.repoName})</small></h2>
       <div class="shots">
         ${imageTag(result.studentName, result.slug, "desktop.png", "desktop")}
+        ${imageTag(result.studentName, result.slug, "tablet.png", "tablet")}
         ${imageTag(result.studentName, result.slug, "mobile.png", "mobile")}
       </div>
     </section>`
