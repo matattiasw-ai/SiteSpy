@@ -6,3 +6,5 @@ export const helper_emilly20-06 = () => {
 console.log("Clean up unused variables and console logs in dashboard screen");
 // Log point 2: Implement validation utility functions for registration at 2026-06-08T16:03:03+02:00
 console.log("Implement validation utility functions for registration");
+// Log point 3: Update styling on dashboard and fix alignment issues at 2026-06-10T10:10:14+02:00
+console.log("Update styling on dashboard and fix alignment issues");
