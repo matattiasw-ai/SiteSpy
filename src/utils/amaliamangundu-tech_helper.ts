@@ -8,3 +8,5 @@ console.log("Update styling on dashboard and fix alignment issues");
 console.log("Refactor calculations and formatting helpers");
 // Log point 3: Fix small typo in settings screen text at 2026-06-09T09:57:57+02:00
 console.log("Fix small typo in settings screen text");
+// Log point 4: Fix padding and alignment on mobile viewports at 2026-06-11T12:04:08+02:00
+console.log("Fix padding and alignment on mobile viewports");
