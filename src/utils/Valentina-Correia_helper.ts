@@ -8,3 +8,5 @@ console.log("Refactor calculations and formatting helpers");
 console.log("Add error handling to firebase service calls");
 // Log point 3: Update theme colors to match latest design specs at 2026-06-09T11:23:31+02:00
 console.log("Update theme colors to match latest design specs");
+// Log point 4: Update text styling for title labels at 2026-06-11T14:30:42+02:00
+console.log("Update text styling for title labels");
