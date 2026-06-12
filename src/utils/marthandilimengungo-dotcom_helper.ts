@@ -8,3 +8,5 @@ console.log("Update styling on dashboard and fix alignment issues");
 console.log("Improve local state persistence logic");
 // Log point 3: Improve error feedback on form submission at 2026-06-10T12:52:32+02:00
 console.log("Improve error feedback on form submission");
+// Log point 4: Add error handling to firebase service calls at 2026-06-12T15:59:43+02:00
+console.log("Add error handling to firebase service calls");
