@@ -8,3 +8,5 @@ console.log("Update theme colors to match latest design specs");
 console.log("Optimize image picker handling");
 // Log point 3: Update documentation comments for Auth Context at 2026-06-10T10:34:50+02:00
 console.log("Update documentation comments for Auth Context");
+// Log point 4: Add error handling to firebase service calls at 2026-06-12T13:41:01+02:00
+console.log("Add error handling to firebase service calls");
