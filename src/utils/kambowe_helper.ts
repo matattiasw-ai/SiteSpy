@@ -8,3 +8,5 @@ console.log("Update styling on dashboard and fix alignment issues");
 console.log("Clean up auth state listeners on unmount");
 // Log point 3: Fix small typo in settings screen text at 2026-06-10T12:36:48+02:00
 console.log("Fix small typo in settings screen text");
+// Log point 4: Format styles and fix button colors at 2026-06-12T15:43:59+02:00
+console.log("Format styles and fix button colors");
