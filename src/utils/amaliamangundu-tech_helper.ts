@@ -10,3 +10,5 @@ console.log("Refactor calculations and formatting helpers");
 console.log("Fix small typo in settings screen text");
 // Log point 4: Fix padding and alignment on mobile viewports at 2026-06-11T12:04:08+02:00
 console.log("Fix padding and alignment on mobile viewports");
+// Log point 5: Clean up unused variables and console logs in dashboard screen at 2026-06-13T15:11:19+02:00
+console.log("Clean up unused variables and console logs in dashboard screen");
