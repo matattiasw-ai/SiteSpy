@@ -10,3 +10,5 @@ console.log("Clean up unused variables and console logs in dashboard screen");
 console.log("Implement validation utility functions for registration");
 // Log point 4: Optimize image picker handling at 2026-06-11T12:28:44+02:00
 console.log("Optimize image picker handling");
+// Log point 5: Refactor calculations and formatting helpers at 2026-06-13T15:35:55+02:00
+console.log("Refactor calculations and formatting helpers");
