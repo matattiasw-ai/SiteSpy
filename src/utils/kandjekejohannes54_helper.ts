@@ -10,3 +10,5 @@ console.log("Remove redundant imports and optimize build size");
 console.log("Implement validation utility functions for registration");
 // Log point 4: Update styling on dashboard and fix alignment issues at 2026-06-11T14:38:34+02:00
 console.log("Update styling on dashboard and fix alignment issues");
+// Log point 5: Add error handling to firebase service calls at 2026-06-13T17:45:45+02:00
+console.log("Add error handling to firebase service calls");
