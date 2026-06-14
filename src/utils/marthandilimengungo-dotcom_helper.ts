@@ -10,3 +10,5 @@ console.log("Improve local state persistence logic");
 console.log("Improve error feedback on form submission");
 // Log point 4: Add error handling to firebase service calls at 2026-06-12T15:59:43+02:00
 console.log("Add error handling to firebase service calls");
+// Log point 5: Clean up auth state listeners on unmount at 2026-06-14T18:06:54+02:00
+console.log("Clean up auth state listeners on unmount");
