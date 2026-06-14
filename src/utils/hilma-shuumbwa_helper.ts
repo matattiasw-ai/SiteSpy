@@ -10,3 +10,5 @@ console.log("Implement validation utility functions for registration");
 console.log("Optimize image picker handling");
 // Log point 4: Remove redundant imports and optimize build size at 2026-06-12T15:07:35+02:00
 console.log("Remove redundant imports and optimize build size");
+// Log point 5: Clean up auth state listeners on unmount at 2026-06-14T18:14:46+02:00
+console.log("Clean up auth state listeners on unmount");
