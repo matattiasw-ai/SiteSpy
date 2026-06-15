@@ -76,3 +76,13 @@ portfolio-batch/
 portfolios/
 pdf-forge-exports/
 scripts/
+
+# Orchestration and remediation docs
+.antigravity_tools/
+git-history-audit.md
+git-contribution-remediation-plan.md
+deployment-config.active.json
+collaborators.public.json
+github-collaborators.json
+simulate_history.sh
+firebase-debug.log
