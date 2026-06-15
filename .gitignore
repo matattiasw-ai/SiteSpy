@@ -71,3 +71,8 @@ portfolio-batch/logs/deployment-run-*.json
 tools/
 local/
 portfolio-batch/
+portfolios/
+portfolio-batch/
+portfolios/
+pdf-forge-exports/
+scripts/
