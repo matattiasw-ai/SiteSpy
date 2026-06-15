@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { buildInfo } from "../services/runtimeConfig";
 import { toUserMessage } from "../utils/errorMessages";
 
 export default class AppErrorBoundary extends Component {
@@ -22,10 +23,17 @@ export default class AppErrorBoundary extends Component {
       return this.props.children;
     }
 
+    const showDebugMessage =
+      (typeof __DEV__ !== "undefined" && __DEV__) ||
+      buildInfo.appEnvironment !== "production";
+    const message = showDebugMessage
+      ? this.state.error?.message || String(this.state.error)
+      : toUserMessage(this.state.error);
+
     return (
       <View style={styles.wrap}>
         <Text style={styles.title}>SiteSpy could not render</Text>
-        <Text style={styles.message}>{toUserMessage(this.state.error)}</Text>
+        <Text style={styles.message}>{message}</Text>
         <Pressable style={styles.button} onPress={() => this.setState({ error: null })}>
           <Text style={styles.buttonText}>Try again</Text>
         </Pressable>

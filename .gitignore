@@ -45,6 +45,8 @@ docs/ThatFile.txt
 docs/Collaborators.json
 docs/Collaborators_Departments.jpeg
 project-management/Collaborators.json
+portfolio-batch/
+
 
 # Editors and OS files
 .vscode/
@@ -66,3 +68,6 @@ project-management/SITESPY_STAGGERED_COMMITS_PLAN.md
 portfolio-batch/deployment-config.local.json
 portfolio-batch/logs/deployment-run-*.md
 portfolio-batch/logs/deployment-run-*.json
+tools/
+local/
+portfolio-batch/
